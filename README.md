@@ -1,4 +1,4 @@
-# Humanteq landing page
+# Humanteq landing page ;;;
 
 Адаптивный одностраничный лендинг на React, TypeScript и Vite. Интерфейс включает навигацию по секциям, мобильное меню, интерактивный FAQ и адаптивную вёрстку.
 
