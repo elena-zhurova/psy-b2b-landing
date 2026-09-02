@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'TT Chocolates VF Trial';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/TT_Chocolates_Trial_Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Chocolates VF Trial';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/TT_Chocolates_Trial_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Chocolates VF Trial';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/TT_Chocolates_Trial_DemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Livret Trial Italic Variable';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/TT%20Livret%20Text%20Trial%20Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Livret Trial Italic Variable';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/TT%20Livret%20Text%20Trial%20Medium.ttf') format('truetype');
+}
+
+:root {
+  --primitives-color-black: #050505;
+  --primitives-color-blue: #98ccf1;
+  --primitives-color-blue-light: #c2e5fd;
+  --primitives-color-blue-superlight: #d8efff;
+  --primitives-color-grey: #959595;
+  --primitives-color-grey-light: #e0e0e0;
+  --primitives-color-grey-superlight: #f7f7f7;
+  --primitives-color-white: #ffffff;
+
+  --primitives-type-family-primary: 'TT Chocolates VF Trial';
+  --primitives-type-family-decor: 'TT Livret Trial Italic Variable';
+  --primitives-type-style-regular: 400;
+  --primitives-type-style-medium: 500;
+  --primitives-type-style-demibold: 600;
+  --primitives-type-size-20: 20px;
+  --primitives-type-size-24: 24px;
+  --primitives-type-size-28: 28px;
+  --primitives-type-size-32: 32px;
+  --primitives-type-size-40: 40px;
+  --primitives-type-size-48: 48px;
+  --primitives-type-size-64: 64px;
+  --primitives-type-letter-spacing-normal: 0;
+  --primitives-type-line-height-110: 110%;
+  --primitives-type-line-height-140: 140%;
+
+  --primitives-radius-8: 8px;
+  --primitives-radius-20: 20px;
+  --primitives-radius-30: 30px;
+  --primitives-radius-9999: 9999px;
+
+  --primitives-spacing-0: 0px;
+  --primitives-spacing-8: 8px;
+  --primitives-spacing-20: 20px;
+  --primitives-spacing-40: 40px;
+  --primitives-spacing-52: 52px;
+  --primitives-spacing-80: 80px;
+
+  --layout-mode-narrow-min-width: 320px;
+  --layout-mode-narrow-max-width: 640px;
+  --layout-mode-medium-min-width: 641px;
+  --layout-mode-medium-max-width: 1279px;
+  --layout-mode-wide-min-width: 1280px;
+}

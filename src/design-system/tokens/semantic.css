@@ -1,0 +1,31 @@
+@import './primitives.css';
+
+:root {
+  --semantic-color-surface-default: var(--primitives-color-white);
+  --semantic-color-border-light: var(--primitives-color-grey);
+  --semantic-color-text-primary: var(--primitives-color-black);
+  --semantic-color-text-secondary: var(--primitives-color-grey);
+  --semantic-color-text-decor: var(--primitives-color-grey-light);
+  --semantic-color-text-inverse: var(--primitives-color-white);
+
+  --semantic-spacing-surface-compact: var(--primitives-spacing-20);
+  --semantic-spacing-surface-comfortable: var(--primitives-spacing-40);
+  --semantic-spacing-section-outer-top-md: var(--primitives-spacing-52);
+  --semantic-spacing-section-outer-top-lg: var(--primitives-spacing-80);
+  --semantic-spacing-section-outer-bottom-md: var(--primitives-spacing-52);
+  --semantic-spacing-section-outer-bottom-lg: var(--primitives-spacing-80);
+
+  --semantic-text-heading: var(--primitives-type-size-32);
+}
+
+@media (min-width: 641px) {
+  :root {
+    --semantic-text-heading: var(--primitives-type-size-40);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --semantic-text-heading: var(--primitives-type-size-48);
+  }
+}

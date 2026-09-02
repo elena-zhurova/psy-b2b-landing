@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Overview" />
+
+# Design System
+
+The code foundation follows the same three-level architecture as the design source:
+
+Foundation -> Semantic -> Components
+
+Components must use Semantic tokens only. Semantic tokens may reference Foundation tokens. Foundation tokens do not reference Semantic or Components.
+
+## Foundation
+
+Foundation tokens live in `src/design-system/tokens/primitives.css` and `src/design-system/tokens/semantic.css`, matching the source token files `primitives.tokens.json`, `semantic.tokens.json`, and `local.tokens.json`.
+
+`primitives.tokens.json` and `semantic.tokens.json` are intended for Figma exports and should keep Figma IDs. `local.tokens.json` stores manually maintained tokens that cannot be configured or exported reliably from Figma, so it does not include Figma IDs.
+
+- Color
+- Typography
+- Space
+- Radius
+- Elevation
+- Layout
+
+Elevation is reserved as a foundation category, but no elevation source token exists in the current token JSON yet.
+
+## Layout Modes
+
+Layout modes are defined as Foundation values and applied through Semantic tokens:
+
+- `narrow`: 320-640px
+- `medium`: 641-1279px
+- `wide`: 1280px and up
+
+Components should not use breakpoints directly. If breakpoints change later, Semantic tokens absorb that change.
+
+## Semantic
+
+Implemented Semantic tokens include color, spacing, and typography.
+
+The first responsive Semantic typography token is:
+
+- `--semantic-text-heading`
+
+It resolves by layout mode:
+
+- `wide` -> `--primitives-type-size-48`
+- `medium` -> `--primitives-type-size-40`
+- `narrow` -> `--primitives-type-size-32`
+
+State tokens are not present in the current `semantic.tokens.json` yet. Storybook keeps a dedicated States page so the category has a documented place when those tokens are added.

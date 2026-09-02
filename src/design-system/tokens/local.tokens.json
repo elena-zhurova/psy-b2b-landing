@@ -1,0 +1,16 @@
+{
+  "primitives": {
+    "type": {
+      "lineHeight": {
+        "110": {
+          "$type": "lineHeight",
+          "$value": "110%"
+        },
+        "140": {
+          "$type": "lineHeight",
+          "$value": "140%"
+        }
+      }
+    }
+  }
+}

@@ -26,13 +26,18 @@ pnpm preview
 ## Структура
 
 ```text
+docs/
+  design-system-spec.md  Спецификация дизайн-системы
+  figma-to-code.md       Правила переноса макетов Figma в код
 src/
-  components/    UI-компоненты страницы
-  data/          Тексты, навигация и данные блоков
-  App.tsx        Компоновка лендинга
+  design-system/
+    tokens/      Foundation, semantic и local design tokens
+  stories/       Документация и визуализация design system в Storybook
   main.tsx       Точка входа React
-  styles.css     Адаптивные стили и дизайн-токены
-public/          Статические файлы
+public/
+  fonts/         Локальные шрифты для дизайн-системы
+  favicon.svg    Иконка проекта
+.storybook/      Конфигурация Storybook
 ```
 
 ## Основные команды
@@ -42,8 +47,3 @@ public/          Статические файлы
 - `pnpm preview` — предпросмотр production-сборки
 
 ## Примечание
-
-В проекте используются только самостоятельно созданные интерфейсные элементы и стили. Внешние зависимости зафиксированы в `pnpm-lock.yaml`; папка `node_modules` намеренно не включается в пакет передачи.
-# humanteq
-# humanteq
-# humanteq
