@@ -1,0 +1,33 @@
+.ds-button-hide-expand {
+  align-items: center;
+  background: var(--semantic-color-button-hide-expand-background-default);
+  border: 0;
+  border-radius: var(--semantic-button-hide-expand-radius);
+  cursor: pointer;
+  display: inline-flex;
+  height: var(--semantic-button-hide-expand-size);
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: var(--semantic-button-hide-expand-size);
+}
+
+.ds-button-hide-expand__icon {
+  display: block;
+  height: var(--semantic-button-hide-expand-icon-size);
+  position: absolute;
+  transition: opacity 120ms ease;
+  width: var(--semantic-button-hide-expand-icon-size);
+}
+
+.ds-button-hide-expand__icon--hover {
+  opacity: 0;
+}
+
+.ds-button-hide-expand:hover .ds-button-hide-expand__icon--default {
+  opacity: 0;
+}
+
+.ds-button-hide-expand:hover .ds-button-hide-expand__icon--hover {
+  opacity: 1;
+}

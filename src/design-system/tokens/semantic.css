@@ -1,12 +1,99 @@
 @import './primitives.css';
 
 :root {
-  --semantic-color-surface-default: var(--primitives-color-white);
+  --semantic-color-surface-background-standard: var(--primitives-color-white);
   --semantic-color-border-light: var(--primitives-color-grey);
   --semantic-color-text-primary: var(--primitives-color-black);
   --semantic-color-text-secondary: var(--primitives-color-grey);
   --semantic-color-text-decor: var(--primitives-color-grey-light);
   --semantic-color-text-inverse: var(--primitives-color-white);
+  --semantic-color-button-background-primary-default: var(--primitives-color-black);
+  --semantic-color-button-background-anchor-default: var(--primitives-color-blue-superlight);
+  --semantic-color-button-text-primary-default: var(--semantic-color-text-inverse);
+  --semantic-color-button-text-primary-hover: var(--primitives-color-blue);
+  --semantic-color-button-text-anchor-default: var(--semantic-color-text-primary);
+  --semantic-color-button-text-anchor-hover: var(--primitives-color-blue-accent);
+  --semantic-color-button-hide-expand-background-default: var(--primitives-color-grey-superlight);
+  --semantic-color-bubble-border: var(--primitives-color-grey);
+  --semantic-color-surface-background-accent: var(--primitives-color-gradient);
+
+  --semantic-type-button-font-family: var(--primitives-type-family-primary);
+  --semantic-type-button-font-weight: var(--primitives-type-weight-demibold);
+  --semantic-type-button-font-size: var(--primitives-type-size-20);
+  --semantic-type-button-line-height: var(--primitives-type-line-height-110);
+  --semantic-type-button-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-decor-number-font-family: var(--primitives-type-family-decor);
+  --semantic-type-decor-number-font-style: var(--primitives-type-style-text-italic);
+  --semantic-type-decor-number-font-weight: var(--primitives-type-weight-regular);
+  --semantic-type-decor-number-font-size: var(--primitives-type-size-64);
+  --semantic-type-decor-number-line-height: var(--primitives-type-line-height-110);
+  --semantic-type-decor-number-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-decor-initial-font-family: var(--primitives-type-family-decor);
+  --semantic-type-decor-initial-font-style: var(--primitives-type-style-text-italic);
+  --semantic-type-decor-initial-font-weight: var(--primitives-type-weight-regular);
+  --semantic-type-decor-initial-font-size: var(--primitives-type-size-32);
+  --semantic-type-decor-initial-line-height: var(--primitives-type-line-height-110);
+  --semantic-type-decor-initial-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-decor-heading-font-family: var(--primitives-type-family-decor);
+  --semantic-type-decor-heading-font-style: var(--primitives-type-style-text-italic);
+  --semantic-type-decor-heading-font-weight: var(--primitives-type-weight-regular);
+  --semantic-type-decor-heading-font-size: var(--primitives-type-size-48);
+  --semantic-type-decor-heading-line-height: var(--primitives-type-line-height-110);
+  --semantic-type-decor-heading-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-heading-lg-font-family: var(--primitives-type-family-primary);
+  --semantic-type-heading-lg-font-weight: var(--primitives-type-weight-medium);
+  --semantic-type-heading-lg-font-size: var(--primitives-type-size-48);
+  --semantic-type-heading-lg-line-height: var(--primitives-type-line-height-110);
+  --semantic-type-heading-lg-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-heading-sm-font-family: var(--primitives-type-family-primary);
+  --semantic-type-heading-sm-font-weight: var(--primitives-type-weight-medium);
+  --semantic-type-heading-sm-font-size: var(--primitives-type-size-28);
+  --semantic-type-heading-sm-line-height: var(--primitives-type-line-height-140);
+  --semantic-type-heading-sm-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-description-normal-font-family: var(--primitives-type-family-primary);
+  --semantic-type-description-normal-font-weight: var(--primitives-type-weight-regular);
+  --semantic-type-description-normal-font-size: var(--primitives-type-size-24);
+  --semantic-type-description-normal-line-height: var(--primitives-type-line-height-140);
+  --semantic-type-description-normal-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-description-accent-font-family: var(--primitives-type-family-primary);
+  --semantic-type-description-accent-font-weight: var(--primitives-type-weight-medium);
+  --semantic-type-description-accent-font-size: var(--primitives-type-size-24);
+  --semantic-type-description-accent-line-height: var(--primitives-type-line-height-140);
+  --semantic-type-description-accent-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-type-body-normal-font-family: var(--primitives-type-family-primary);
+  --semantic-type-body-normal-font-weight: var(--primitives-type-weight-regular);
+  --semantic-type-body-normal-font-size: var(--primitives-type-size-20);
+  --semantic-type-body-normal-line-height: var(--primitives-type-line-height-140);
+  --semantic-type-body-normal-letter-spacing: var(--primitives-type-letter-spacing-normal);
+
+  --semantic-button-padding-x: var(--primitives-spacing-40);
+  --semantic-button-padding-y: var(--primitives-spacing-20);
+  --semantic-button-radius: var(--primitives-radius-9999);
+
+  --semantic-button-hide-expand-size: var(--primitives-spacing-52);
+  --semantic-button-hide-expand-icon-size: var(--primitives-spacing-20);
+  --semantic-button-hide-expand-radius: var(--primitives-radius-9999);
+
+  --semantic-bubble-padding-x: var(--primitives-spacing-20);
+  --semantic-bubble-padding-y: var(--primitives-spacing-8);
+  --semantic-bubble-radius: var(--primitives-radius-9999);
+
+  --semantic-faq-item-width: 885px;
+  --semantic-faq-item-padding-left: var(--primitives-spacing-40);
+  --semantic-faq-item-padding-right: var(--primitives-spacing-20);
+  --semantic-faq-item-padding-y: var(--primitives-spacing-20);
+  --semantic-faq-item-radius: var(--primitives-radius-20);
+  --semantic-faq-item-gap-default: var(--primitives-spacing-40);
+  --semantic-faq-item-gap-active: var(--primitives-spacing-20);
+  --semantic-faq-item-content-gap: var(--primitives-spacing-40);
 
   --semantic-spacing-surface-compact: var(--primitives-spacing-20);
   --semantic-spacing-surface-comfortable: var(--primitives-spacing-40);

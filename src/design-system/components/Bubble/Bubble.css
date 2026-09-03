@@ -1,0 +1,28 @@
+.ds-bubble {
+  align-items: center;
+  border: 1px solid var(--semantic-color-bubble-border);
+  border-radius: var(--semantic-bubble-radius);
+  color: var(--semantic-color-text-primary);
+  display: inline-flex;
+  font-family: var(--semantic-type-description-normal-font-family);
+  font-weight: var(--semantic-type-description-normal-font-weight);
+  justify-content: center;
+  letter-spacing: var(--semantic-type-description-normal-letter-spacing);
+  line-height: var(--semantic-type-description-normal-line-height);
+  padding: var(--semantic-bubble-padding-y)
+    var(--semantic-bubble-padding-x);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ds-bubble--lg {
+  font-size: var(--semantic-type-description-normal-font-size);
+}
+
+.ds-bubble--md {
+  font-family: var(--semantic-type-body-normal-font-family);
+  font-size: var(--semantic-type-body-normal-font-size);
+  font-weight: var(--semantic-type-body-normal-font-weight);
+  letter-spacing: var(--semantic-type-body-normal-letter-spacing);
+  line-height: var(--semantic-type-body-normal-line-height);
+}

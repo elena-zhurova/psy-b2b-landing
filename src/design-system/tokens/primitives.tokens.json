@@ -105,7 +105,7 @@
           "$type": "number",
           "$value": 40,
           "$extensions": {
-      
+            "com.figma.variableId": "VariableID:170:715",
             "com.figma.scopes": [
               "ALL_SCOPES"
             ]
@@ -132,7 +132,7 @@
           }
         }
       },
-      "letter-spasing": {
+      "letterSpacing": {
         "normal": {
           "$type": "number",
           "$value": 0,
@@ -179,6 +179,25 @@
         },
         "$extensions": {
           "com.figma.variableId": "VariableID:27:17739",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      },
+      "blue-accent": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0,
+            0.3664852976799011,
+            0.6272535920143127
+          ],
+          "alpha": 1,
+          "hex": "#005DA0"
+        },
+        "$extensions": {
+          "com.figma.variableId": "VariableID:188:760",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ]

@@ -74,6 +74,12 @@ Components
 - Elevation
 - Layout
 
+## Typography note
+
+В `primitives.tokens.json` есть токены `primitives.type.style.regular`, `primitives.type.style.medium` и `primitives.type.style.demibold`. Они приходят из Figma, потому что в макете жирность текста описана через style, а не через числовой weight.
+
+Эти style-токены сохраняются как часть Figma export, но не используются в кодовых text roles. Для `font-weight` используются локальные числовые токены из `local.tokens.json`: `primitives.type.weight.regular`, `primitives.type.weight.medium`, `primitives.type.weight.demibold`.
+
 ---
 
 # Layout
@@ -122,6 +128,49 @@ narrow
 
 - Components используют только semantic/text/heading.
 - Использование primitives внутри компонентов запрещено.
+
+---
+
+## Surface и Card
+
+### Surface
+
+Surface — крупная композиционная поверхность или контейнер интерфейса.
+
+Surface может содержать другие компоненты, включая Card.
+
+Примеры:
+- большие контентные блоки;
+- баннеры;
+- фреймы форм;
+- крупные промо-поверхности;
+- контейнеры секций.
+
+Общие токены таких поверхностей используют `semantic/surface/*`
+и `semantic/color/surface/*`.
+
+### Card
+
+Card — компактный повторяемый контентный блок, который может использоваться
+внутри Surface, Grid или Carousel.
+
+Примеры:
+- FAQItem;
+- SpecialistCard;
+- StatisticCard;
+- StoryCard.
+
+Общие свойства карточек используют `semantic/card/*`
+и `semantic/color/card/*`.
+
+Если свойство характерно только для одного компонента и не является общим
+паттерном Card, оно остаётся компонентно-специфичным:
+
+`semantic/{componentName}/*`
+
+Например:
+
+`semantic/faqItem/gap/active`
 
 ---
 

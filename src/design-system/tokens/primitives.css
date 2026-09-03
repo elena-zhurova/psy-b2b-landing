@@ -36,18 +36,28 @@
 :root {
   --primitives-color-black: #050505;
   --primitives-color-blue: #98ccf1;
+  --primitives-color-blue-accent: #005da0;
   --primitives-color-blue-light: #c2e5fd;
   --primitives-color-blue-superlight: #d8efff;
   --primitives-color-grey: #959595;
   --primitives-color-grey-light: #e0e0e0;
   --primitives-color-grey-superlight: #f7f7f7;
   --primitives-color-white: #ffffff;
+  --primitives-color-gradient: radial-gradient(
+    61.8% 327.1% at 38.9% 0%,
+    var(--primitives-color-blue-superlight) 0%,
+    var(--primitives-color-blue) 74.5%
+  );
 
   --primitives-type-family-primary: 'TT Chocolates VF Trial';
   --primitives-type-family-decor: 'TT Livret Trial Italic Variable';
   --primitives-type-style-regular: 400;
   --primitives-type-style-medium: 500;
   --primitives-type-style-demibold: 600;
+  --primitives-type-style-text-italic: italic;
+  --primitives-type-weight-regular: 400;
+  --primitives-type-weight-medium: 500;
+  --primitives-type-weight-demibold: 600;
   --primitives-type-size-20: 20px;
   --primitives-type-size-24: 24px;
   --primitives-type-size-28: 28px;

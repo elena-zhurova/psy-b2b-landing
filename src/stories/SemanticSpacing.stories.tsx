@@ -7,6 +7,10 @@ const semanticSpacingTokens = [
   { name: '--semantic-spacing-section-outer-top-lg', value: '80px', alias: 'primitives/spacing/80' },
   { name: '--semantic-spacing-section-outer-bottom-md', value: '52px', alias: 'primitives/spacing/52' },
   { name: '--semantic-spacing-section-outer-bottom-lg', value: '80px', alias: 'primitives/spacing/80' },
+  { name: '--semantic-button-padding-x', value: '40px', alias: 'primitives/spacing/40' },
+  { name: '--semantic-button-padding-y', value: '20px', alias: 'primitives/spacing/20' },
+  { name: '--semantic-bubble-padding-x', value: '20px', alias: 'primitives/spacing/20' },
+  { name: '--semantic-bubble-padding-y', value: '8px', alias: 'primitives/spacing/8' },
 ];
 
 const SemanticSpacing = () => (

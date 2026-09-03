@@ -1,0 +1,35 @@
+.ds-button {
+  align-items: center;
+  border: 0;
+  border-radius: var(--semantic-button-radius);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--semantic-type-button-font-family);
+  font-size: var(--semantic-type-button-font-size);
+  font-weight: var(--semantic-type-button-font-weight);
+  justify-content: center;
+  letter-spacing: var(--semantic-type-button-letter-spacing);
+  line-height: var(--semantic-type-button-line-height);
+  padding: var(--semantic-button-padding-y)
+    var(--semantic-button-padding-x);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ds-button--primary {
+  background: var(--semantic-color-button-background-primary-default);
+  color: var(--semantic-color-button-text-primary-default);
+}
+
+.ds-button--anchor {
+  background: var(--semantic-color-button-background-anchor-default);
+  color: var(--semantic-color-button-text-anchor-default);
+}
+
+.ds-button--primary:hover {
+  color: var(--semantic-color-button-text-primary-hover);
+}
+
+.ds-button--anchor:hover {
+  color: var(--semantic-color-button-text-anchor-hover);
+}

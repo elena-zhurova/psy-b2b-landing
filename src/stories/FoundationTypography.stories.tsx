@@ -22,9 +22,16 @@ const typeFamilies = [
 ];
 
 const typeStyles = [
-  { name: '--primitives-type-style-regular', value: 'Regular / 400' },
-  { name: '--primitives-type-style-medium', value: 'Medium / 500' },
-  { name: '--primitives-type-style-demibold', value: 'DemiBold / 600' },
+  { name: 'primitives/type/style/regular', value: 'Regular' },
+  { name: 'primitives/type/style/medium', value: 'Medium' },
+  { name: 'primitives/type/style/demibold', value: 'DemiBold' },
+  { name: '--primitives-type-style-text-italic', value: 'italic' },
+];
+
+const typeWeights = [
+  { name: '--primitives-type-weight-regular', value: '400' },
+  { name: '--primitives-type-weight-medium', value: '500' },
+  { name: '--primitives-type-weight-demibold', value: '600' },
 ];
 
 const FoundationTypography = () => (
@@ -82,7 +89,34 @@ const FoundationTypography = () => (
     </section>
 
     <section style={{ display: 'grid', gap: '14px' }}>
+      <strong>Figma text styles kept as export</strong>
       {typeStyles.map((token) => (
+        <div
+          key={token.name}
+          style={{
+            alignItems: 'baseline',
+            display: 'grid',
+            gap: '16px',
+            gridTemplateColumns: '260px 120px 1fr',
+          }}
+        >
+          <code>{token.name}</code>
+          <span>{token.value}</span>
+          <span
+            style={{
+              color: 'var(--semantic-color-text-secondary)',
+              fontSize: '14px',
+            }}
+          >
+            not used for font-weight
+          </span>
+        </div>
+      ))}
+    </section>
+
+    <section style={{ display: 'grid', gap: '14px' }}>
+      <strong>Local font weights used by text roles</strong>
+      {typeWeights.map((token) => (
         <div
           key={token.name}
           style={{
