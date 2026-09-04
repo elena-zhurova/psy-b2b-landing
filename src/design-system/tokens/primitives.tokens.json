@@ -132,7 +132,7 @@
           }
         }
       },
-      "letterSpaсing": {
+      "letterSpacing": {
         "normal": {
           "$type": "number",
           "$value": 0,

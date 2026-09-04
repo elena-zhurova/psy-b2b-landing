@@ -157,7 +157,7 @@ const SemanticHeadingPreview = () => (
       style={{
         border: '1px solid var(--semantic-color-border-light)',
         borderRadius: 'var(--primitives-radius-8)',
-        padding: 'var(--semantic-spacing-surface-comfortable)',
+        padding: 'var(--semantic-surface-padding-x-compact)',
       }}
     >
       <p

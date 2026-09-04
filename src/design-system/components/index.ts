@@ -9,3 +9,10 @@ export type {
 } from './ButtonHideExpand';
 export { FAQItem } from './FAQItem';
 export type { FAQItemProps, FAQItemState } from './FAQItem';
+export { Link } from './Link';
+export type {
+  LinkDestination,
+  LinkPresentation,
+  LinkProps,
+  LinkState,
+} from './Link';

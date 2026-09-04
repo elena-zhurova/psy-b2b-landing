@@ -8,7 +8,11 @@ const colorTokens = [
   { name: '--primitives-color-grey', value: '#959595' },
   { name: '--primitives-color-grey-light', value: '#E0E0E0' },
   { name: '--primitives-color-grey-superlight', value: '#F7F7F7' },
+  { name: '--primitives-color-sapphire', value: '#005DA0' },
+  { name: '--primitives-color-sapphire-light', value: '#007FDA' },
+  { name: '--primitives-color-transparent', value: 'transparent' },
   { name: '--primitives-color-white', value: '#FFFFFF' },
+  { name: '--primitives-color-gradient', value: 'gradient' },
 ];
 
 const FoundationColors = () => (

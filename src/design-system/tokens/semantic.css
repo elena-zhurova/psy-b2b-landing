@@ -1,21 +1,26 @@
 @import './primitives.css';
 
 :root {
-  --semantic-color-surface-background-standard: var(--primitives-color-white);
+  --semantic-color-surface-background-default: var(--primitives-color-transparent);
+  --semantic-color-surface-background-secondary: var(--primitives-color-white);
+  --semantic-color-surface-background-accent: var(--primitives-color-gradient);
   --semantic-color-border-light: var(--primitives-color-grey);
   --semantic-color-text-primary: var(--primitives-color-black);
   --semantic-color-text-secondary: var(--primitives-color-grey);
   --semantic-color-text-decor: var(--primitives-color-grey-light);
   --semantic-color-text-inverse: var(--primitives-color-white);
+  --semantic-color-link-default: var(--primitives-color-sapphire);
+  --semantic-color-link-hover: var(--primitives-color-sapphire-light);
+  --semantic-color-link-active: var(--primitives-color-sapphire);
   --semantic-color-button-background-primary-default: var(--primitives-color-black);
   --semantic-color-button-background-anchor-default: var(--primitives-color-blue-superlight);
+  --semantic-color-button-background-secondary: var(--primitives-color-grey-superlight);
   --semantic-color-button-text-primary-default: var(--semantic-color-text-inverse);
   --semantic-color-button-text-primary-hover: var(--primitives-color-blue);
-  --semantic-color-button-text-anchor-default: var(--semantic-color-text-primary);
-  --semantic-color-button-text-anchor-hover: var(--primitives-color-blue-accent);
-  --semantic-color-button-hide-expand-background-default: var(--primitives-color-grey-superlight);
   --semantic-color-bubble-border: var(--primitives-color-grey);
-  --semantic-color-surface-background-accent: var(--primitives-color-gradient);
+  --semantic-color-bubble-text: var(--semantic-color-text-primary);
+  --semantic-color-card-background-default: var(--primitives-color-white);
+  --semantic-color-card-background-accent: var(--primitives-color-gradient);
 
   --semantic-type-button-font-family: var(--primitives-type-family-primary);
   --semantic-type-button-font-weight: var(--primitives-type-weight-demibold);
@@ -88,15 +93,20 @@
 
   --semantic-faq-item-width: 885px;
   --semantic-faq-item-padding-left: var(--primitives-spacing-40);
-  --semantic-faq-item-padding-right: var(--primitives-spacing-20);
-  --semantic-faq-item-padding-y: var(--primitives-spacing-20);
-  --semantic-faq-item-radius: var(--primitives-radius-20);
-  --semantic-faq-item-gap-default: var(--primitives-spacing-40);
-  --semantic-faq-item-gap-active: var(--primitives-spacing-20);
-  --semantic-faq-item-content-gap: var(--primitives-spacing-40);
-
-  --semantic-spacing-surface-compact: var(--primitives-spacing-20);
-  --semantic-spacing-surface-comfortable: var(--primitives-spacing-40);
+  --semantic-surface-radius: var(--primitives-radius-30);
+  --semantic-surface-padding-x-compact: var(--primitives-spacing-40);
+  --semantic-surface-padding-x-comfortable: var(--primitives-spacing-80);
+  --semantic-surface-padding-y-compact: var(--primitives-spacing-40);
+  --semantic-surface-padding-y-comfortable: var(--primitives-spacing-80);
+  --semantic-surface-gap-compact: var(--primitives-spacing-40);
+  --semantic-surface-gap-comfortable: var(--primitives-spacing-80);
+  --semantic-card-radius: var(--primitives-radius-20);
+  --semantic-card-padding-x-compact: var(--primitives-spacing-8);
+  --semantic-card-padding-x-comfortable: var(--primitives-spacing-20);
+  --semantic-card-padding-y-compact: var(--primitives-spacing-8);
+  --semantic-card-padding-y-comfortable: var(--primitives-spacing-20);
+  --semantic-card-gap-compact: var(--primitives-spacing-20);
+  --semantic-card-gap-comfortable: var(--primitives-spacing-40);
   --semantic-spacing-section-outer-top-md: var(--primitives-spacing-52);
   --semantic-spacing-section-outer-top-lg: var(--primitives-spacing-80);
   --semantic-spacing-section-outer-bottom-md: var(--primitives-spacing-52);

@@ -1,6 +1,6 @@
 .ds-button-hide-expand {
   align-items: center;
-  background: var(--semantic-color-button-hide-expand-background-default);
+  background: var(--semantic-color-button-background-secondary);
   border: 0;
   border-radius: var(--semantic-button-hide-expand-radius);
   cursor: pointer;

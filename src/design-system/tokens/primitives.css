@@ -36,12 +36,14 @@
 :root {
   --primitives-color-black: #050505;
   --primitives-color-blue: #98ccf1;
-  --primitives-color-blue-accent: #005da0;
   --primitives-color-blue-light: #c2e5fd;
   --primitives-color-blue-superlight: #d8efff;
   --primitives-color-grey: #959595;
   --primitives-color-grey-light: #e0e0e0;
   --primitives-color-grey-superlight: #f7f7f7;
+  --primitives-color-sapphire: #005da0;
+  --primitives-color-sapphire-light: #007fda;
+  --primitives-color-transparent: rgb(255 255 255 / 0);
   --primitives-color-white: #ffffff;
   --primitives-color-gradient: radial-gradient(
     61.8% 327.1% at 38.9% 0%,

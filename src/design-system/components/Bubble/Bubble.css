@@ -2,7 +2,7 @@
   align-items: center;
   border: 1px solid var(--semantic-color-bubble-border);
   border-radius: var(--semantic-bubble-radius);
-  color: var(--semantic-color-text-primary);
+  color: var(--semantic-color-bubble-text);
   display: inline-flex;
   font-family: var(--semantic-type-description-normal-font-family);
   font-weight: var(--semantic-type-description-normal-font-weight);

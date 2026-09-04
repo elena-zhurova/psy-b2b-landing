@@ -21,15 +21,6 @@
   color: var(--semantic-color-button-text-primary-default);
 }
 
-.ds-button--anchor {
-  background: var(--semantic-color-button-background-anchor-default);
-  color: var(--semantic-color-button-text-anchor-default);
-}
-
 .ds-button--primary:hover {
   color: var(--semantic-color-button-text-primary-hover);
-}
-
-.ds-button--anchor:hover {
-  color: var(--semantic-color-button-text-anchor-hover);
 }

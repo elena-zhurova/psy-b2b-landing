@@ -1,6 +1,6 @@
 import './Button.css';
 
-export type ButtonVariant = 'primary' | 'anchor';
+export type ButtonVariant = 'primary';
 
 export type ButtonProps = {
   children: React.ReactNode;

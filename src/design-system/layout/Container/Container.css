@@ -1,0 +1,13 @@
+.ds-container {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: 1600px;
+  padding-inline: var(--primitives-spacing-20);
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .ds-container {
+    padding-inline: var(--primitives-spacing-40);
+  }
+}

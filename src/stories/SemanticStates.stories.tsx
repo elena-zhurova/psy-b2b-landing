@@ -7,7 +7,7 @@ const SemanticStates = () => (
       borderRadius: 'var(--primitives-radius-8)',
       color: 'var(--semantic-color-text-secondary)',
       maxWidth: '520px',
-      padding: 'var(--semantic-spacing-surface-comfortable)',
+      padding: 'var(--semantic-surface-padding-x-compact)',
     }}
   >
     <h2

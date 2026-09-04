@@ -1,0 +1,28 @@
+.ds-link {
+  color: var(--semantic-color-link-default);
+  cursor: pointer;
+}
+
+.ds-link--text {
+  text-decoration: underline;
+}
+
+.ds-link--filled {
+  align-items: center;
+  background: var(--semantic-color-button-background-anchor-default);
+  border-radius: var(--semantic-button-radius);
+  display: inline-flex;
+  justify-content: center;
+  padding: var(--semantic-button-padding-y) var(--semantic-button-padding-x);
+  text-decoration: none;
+}
+
+.ds-link:hover,
+.ds-link--hover {
+  color: var(--semantic-color-link-hover);
+}
+
+.ds-link:active,
+.ds-link--active {
+  color: var(--semantic-color-link-active);
+}
