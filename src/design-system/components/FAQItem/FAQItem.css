@@ -11,8 +11,8 @@
   padding: var(--semantic-card-padding-y-comfortable)
     var(--semantic-card-padding-x-comfortable)
     var(--semantic-card-padding-y-comfortable)
-    var(--semantic-faq-item-padding-left);
-  width: var(--semantic-faq-item-width);
+    var(--primitives-spacing-40);
+  width: 885px;
 }
 
 .ds-faq-item--hover,

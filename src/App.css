@@ -106,7 +106,6 @@ textarea {
 .page-section-heading p,
 .page-surface p,
 .page-media-text p,
-.page-marker-list,
 .page-step-card p {
   font-family: var(--semantic-type-description-normal-font-family);
   font-size: var(--semantic-type-description-normal-font-size);
@@ -270,7 +269,13 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: var(--primitives-spacing-20);
+  font-family: var(--semantic-type-heading-sm-font-family);
+  font-size: var(--semantic-type-heading-sm-font-size);
+  font-weight: var(--semantic-type-heading-sm-font-weight);
+  letter-spacing: var(--semantic-type-heading-sm-letter-spacing);
   list-style: none;
+  line-height: var(--semantic-type-heading-sm-line-height);
+  margin: 0;
   padding: 0;
 }
 
@@ -531,21 +536,8 @@ textarea {
     font-size: 12px;
   }
 
-  .page-section-heading h2,
-  .page-footer__heading {
-    font-size: var(--primitives-type-size-40);
-  }
-
   .page-footer__heading {
     overflow-wrap: anywhere;
-  }
-
-  .page-section-heading p,
-  .page-surface p,
-  .page-media-text p,
-  .page-marker-list,
-  .page-step-card p {
-    font-size: var(--semantic-type-body-normal-font-size);
   }
 
   .page-surface,

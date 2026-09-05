@@ -1,0 +1,15 @@
+{
+  "modes": {
+    "narrow": {
+      "minWidth": 320,
+      "maxWidth": 640
+    },
+    "medium": {
+      "minWidth": 641,
+      "maxWidth": 1279
+    },
+    "wide": {
+      "minWidth": 1280
+    }
+  }
+}

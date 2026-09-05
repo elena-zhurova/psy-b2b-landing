@@ -423,8 +423,8 @@ export function App() {
             <div className="page-footer__main">
               <FooterGraphic />
               <div className="page-footer__heading">
-                <p>Не нужно разбираться&nbsp;в&nbsp;одиночку.</p>
-                <p>Напишите, даже если не знаете, с&nbsp;чего&nbsp;начать.</p>
+                <p>Не нужно разбираться в&nbsp;одиночку.</p>
+                <p>Напишите, даже если не знаете, с&nbsp;чего начать.</p>
               </div>
               <Button>Сделать первый шаг</Button>
             </div>

@@ -6,7 +6,7 @@ const demoBlock = (label: string) => (
   <div
     style={{
       background: 'var(--semantic-color-card-background-default)',
-      border: '1px solid var(--semantic-color-border-light)',
+      border: '1px solid var(--primitives-color-grey)',
       borderRadius: 'var(--semantic-card-radius)',
       minHeight: '180px',
       padding: 'var(--semantic-card-padding-y-comfortable) var(--semantic-card-padding-x-comfortable)',

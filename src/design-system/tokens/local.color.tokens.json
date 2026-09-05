@@ -1,0 +1,30 @@
+{
+  "primitives": {
+    "color": {
+      "gradient": {
+        "$type": "gradient",
+        "$value": "radial-gradient(61.8% 327.1% at 38.9% 0%, #D8EFFF 0%, #98CCF1 74.5%)"
+      }
+    }
+  },
+  "semantic": {
+    "color": {
+      "surface": {
+        "background": {
+          "accent": {
+            "$type": "gradient",
+            "$value": "{primitives.color.gradient}"
+          }
+        }
+      },
+      "card": {
+        "background": {
+          "accent": {
+            "$type": "gradient",
+            "$value": "{primitives.color.gradient}"
+          }
+        }
+      }
+    }
+  }
+}

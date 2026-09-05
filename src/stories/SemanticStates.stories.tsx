@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 const SemanticStates = () => (
   <div
     style={{
-      border: '1px solid var(--semantic-color-border-light)',
+      border: '1px solid var(--primitives-color-grey)',
       borderRadius: 'var(--primitives-radius-8)',
       color: 'var(--semantic-color-text-secondary)',
       maxWidth: '520px',

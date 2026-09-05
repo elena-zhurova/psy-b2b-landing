@@ -78,7 +78,7 @@ Components
 
 В `primitives.tokens.json` есть токены `primitives.type.style.regular`, `primitives.type.style.medium` и `primitives.type.style.demibold`. Они приходят из Figma, потому что в макете жирность текста описана через style, а не через числовой weight.
 
-Эти style-токены сохраняются как часть Figma export, но не используются в кодовых text roles. Для `font-weight` используются локальные числовые токены из `local.tokens.json`: `primitives.type.weight.regular`, `primitives.type.weight.medium`, `primitives.type.weight.demibold`.
+Эти style-токены сохраняются как часть Figma export, но не используются в кодовых text roles. Для `font-weight` используются локальные числовые токены из `typography.tokens.json`: `primitives.type.weight.regular`, `primitives.type.weight.medium`, `primitives.type.weight.demibold`.
 
 ---
 

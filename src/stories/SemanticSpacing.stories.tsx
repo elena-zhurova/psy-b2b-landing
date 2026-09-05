@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const semanticSpacingTokens = [
-  { name: '--semantic-spacing-section-outer-top-md', value: '52px', alias: 'primitives/spacing/52' },
-  { name: '--semantic-spacing-section-outer-top-lg', value: '80px', alias: 'primitives/spacing/80' },
-  { name: '--semantic-spacing-section-outer-bottom-md', value: '52px', alias: 'primitives/spacing/52' },
-  { name: '--semantic-spacing-section-outer-bottom-lg', value: '80px', alias: 'primitives/spacing/80' },
+  { name: '--semantic-spacing-section-outer-top-md', value: '32 / 40 / 52px', alias: 'responsive semantic spacing' },
+  { name: '--semantic-spacing-section-outer-top-lg', value: '40 / 52 / 80px', alias: 'responsive semantic spacing' },
+  { name: '--semantic-spacing-section-outer-bottom-md', value: '32 / 40 / 52px', alias: 'responsive semantic spacing' },
+  { name: '--semantic-spacing-section-outer-bottom-lg', value: '40 / 52 / 80px', alias: 'responsive semantic spacing' },
   { name: '--semantic-button-padding-x', value: '40px', alias: 'primitives/spacing/40' },
   { name: '--semantic-button-padding-y', value: '20px', alias: 'primitives/spacing/20' },
   { name: '--semantic-bubble-padding-x', value: '20px', alias: 'primitives/spacing/20' },
@@ -32,7 +32,7 @@ const SemanticSpacing = () => (
           alignItems: 'center',
           display: 'grid',
           gap: '14px',
-          gridTemplateColumns: '280px 1fr 56px 160px',
+          gridTemplateColumns: '280px 1fr 112px 180px',
         }}
       >
         <code>{token.name}</code>

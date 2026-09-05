@@ -1,3 +1,5 @@
+/* AUTO-GENERATED FROM DESIGN TOKENS. DO NOT EDIT MANUALLY. */
+
 @font-face {
   font-family: 'TT Chocolates VF Trial';
   font-style: normal;
@@ -34,55 +36,53 @@
 }
 
 :root {
-  --primitives-color-black: #050505;
-  --primitives-color-blue: #98ccf1;
-  --primitives-color-blue-light: #c2e5fd;
-  --primitives-color-blue-superlight: #d8efff;
-  --primitives-color-grey: #959595;
-  --primitives-color-grey-light: #e0e0e0;
-  --primitives-color-grey-superlight: #f7f7f7;
-  --primitives-color-sapphire: #005da0;
-  --primitives-color-sapphire-light: #007fda;
-  --primitives-color-transparent: rgb(255 255 255 / 0);
-  --primitives-color-white: #ffffff;
-  --primitives-color-gradient: radial-gradient(
-    61.8% 327.1% at 38.9% 0%,
-    var(--primitives-color-blue-superlight) 0%,
-    var(--primitives-color-blue) 74.5%
-  );
-
-  --primitives-type-family-primary: 'TT Chocolates VF Trial';
-  --primitives-type-family-decor: 'TT Livret Trial Italic Variable';
-  --primitives-type-style-regular: 400;
-  --primitives-type-style-medium: 500;
-  --primitives-type-style-demibold: 600;
+  --primitives-type-family-primary: TT Chocolates VF Trial;
+  --primitives-type-family-decor: TT Livret Trial Italic Variable;
+  --primitives-type-style-regular: Regular;
+  --primitives-type-style-medium: Medium;
+  --primitives-type-style-demibold: DemiBold;
   --primitives-type-style-text-italic: italic;
-  --primitives-type-weight-regular: 400;
-  --primitives-type-weight-medium: 500;
-  --primitives-type-weight-demibold: 600;
+  --primitives-type-size-16: 16px;
   --primitives-type-size-20: 20px;
   --primitives-type-size-24: 24px;
   --primitives-type-size-28: 28px;
   --primitives-type-size-32: 32px;
   --primitives-type-size-40: 40px;
+  --primitives-type-size-44: 44px;
   --primitives-type-size-48: 48px;
+  --primitives-type-size-60: 60px;
   --primitives-type-size-64: 64px;
   --primitives-type-letter-spacing-normal: 0;
+  --primitives-type-weight-regular: 400;
+  --primitives-type-weight-medium: 500;
+  --primitives-type-weight-demibold: 600;
   --primitives-type-line-height-110: 110%;
   --primitives-type-line-height-140: 140%;
-
+  --primitives-color-black: #050505;
+  --primitives-color-blue: #98ccf1;
+  --primitives-color-sapphire: #005da0;
+  --primitives-color-sapphire-light: #007fda;
+  --primitives-color-blue-light: #c2e5fd;
+  --primitives-color-blue-superlight: #d8efff;
+  --primitives-color-grey: #959595;
+  --primitives-color-grey-light: #e0e0e0;
+  --primitives-color-grey-superlight: #f7f7f7;
+  --primitives-color-white: #ffffff;
+  --primitives-color-transparent: rgb(255 255 255 / 0);
+  --primitives-color-gradient: radial-gradient(61.8% 327.1% at 38.9% 0%, #D8EFFF 0%, #98CCF1 74.5%);
   --primitives-radius-8: 8px;
   --primitives-radius-20: 20px;
   --primitives-radius-30: 30px;
   --primitives-radius-9999: 9999px;
-
   --primitives-spacing-0: 0px;
   --primitives-spacing-8: 8px;
   --primitives-spacing-20: 20px;
+  --primitives-spacing-32: 32px;
   --primitives-spacing-40: 40px;
   --primitives-spacing-52: 52px;
   --primitives-spacing-80: 80px;
 
+  /* Technical responsive configuration, not design tokens. */
   --layout-mode-narrow-min-width: 320px;
   --layout-mode-narrow-max-width: 640px;
   --layout-mode-medium-min-width: 641px;

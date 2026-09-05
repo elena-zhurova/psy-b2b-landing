@@ -105,25 +105,10 @@ const textRoles = [
   },
 ];
 
-const modeRows = [
-  {
-    mode: 'narrow',
-    range: '320-640px',
-    primitive: '--primitives-type-size-32',
-    value: '32px',
-  },
-  {
-    mode: 'medium',
-    range: '641-1279px',
-    primitive: '--primitives-type-size-40',
-    value: '40px',
-  },
-  {
-    mode: 'wide',
-    range: '1280px+',
-    primitive: '--primitives-type-size-48',
-    value: '48px',
-  },
+const responsiveRows = [
+  { mode: 'narrow', range: '320-640px' },
+  { mode: 'medium', range: '641-1279px' },
+  { mode: 'wide', range: '1280px+' },
 ];
 
 const SemanticHeadingPreview = () => (
@@ -153,37 +138,8 @@ const SemanticHeadingPreview = () => (
       ))}
     </div>
 
-    <section
-      style={{
-        border: '1px solid var(--semantic-color-border-light)',
-        borderRadius: 'var(--primitives-radius-8)',
-        padding: 'var(--semantic-surface-padding-x-compact)',
-      }}
-    >
-      <p
-        style={{
-          color: 'var(--semantic-color-text-secondary)',
-          fontSize: '14px',
-          margin: '0 0 12px',
-        }}
-      >
-        Live semantic token
-      </p>
-      <h1
-        style={{
-          color: 'var(--semantic-color-text-primary)',
-          fontSize: 'var(--semantic-text-heading)',
-          letterSpacing: 'var(--primitives-type-letter-spacing-normal)',
-          lineHeight: 'var(--primitives-type-line-height-110)',
-          margin: 0,
-        }}
-      >
-        semantic/text/heading
-      </h1>
-    </section>
-
     <div style={{ display: 'grid', gap: '12px' }}>
-      {modeRows.map((row) => (
+      {responsiveRows.map((row) => (
         <div
           key={row.mode}
           style={{
@@ -197,8 +153,9 @@ const SemanticHeadingPreview = () => (
         >
           <strong>{row.mode}</strong>
           <span>{row.range}</span>
-          <code>{row.primitive}</code>
-          <span>{row.value}</span>
+          <span style={{ gridColumn: 'span 2' }}>
+            Resize the Storybook viewport to verify semantic font-size values.
+          </span>
         </div>
       ))}
     </div>
@@ -206,7 +163,7 @@ const SemanticHeadingPreview = () => (
 );
 
 const meta = {
-  title: 'Foundations/Semantic/Text/Heading',
+  title: 'Foundations/Semantic/Text',
   component: SemanticHeadingPreview,
   parameters: {
     layout: 'centered',

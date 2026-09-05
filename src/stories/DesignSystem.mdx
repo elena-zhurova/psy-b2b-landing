@@ -12,9 +12,9 @@ Components must use Semantic tokens only. Semantic tokens may reference Foundati
 
 ## Foundation
 
-Foundation tokens live in `src/design-system/tokens/primitives.css` and `src/design-system/tokens/semantic.css`, matching the source token files `primitives.tokens.json`, `semantic.tokens.json`, and `local.tokens.json`.
+Foundation tokens live in `src/design-system/tokens/primitives.css` and `src/design-system/tokens/semantic.css`, matching the source token files `primitives.tokens.json`, `semantic/*.tokens.json`, `typography.tokens.json`, and `local.color.tokens.json`.
 
-`primitives.tokens.json` and `semantic.tokens.json` are intended for Figma exports and should keep Figma IDs. `local.tokens.json` stores manually maintained tokens that cannot be configured or exported reliably from Figma, so it does not include Figma IDs.
+`primitives.tokens.json` and `semantic/*.tokens.json` are intended for Figma exports and should keep Figma IDs. `typography.tokens.json` stores semantic typography roles and local typography primitives that cannot be configured or exported reliably from Figma. `local.color.tokens.json` stores local color tokens and aliases. Local token files do not include Figma IDs.
 
 - Color
 - Typography
@@ -39,14 +39,12 @@ Components should not use breakpoints directly. If breakpoints change later, Sem
 
 Implemented Semantic tokens include color, spacing, and typography.
 
-The first responsive Semantic typography token is:
+Semantic typography roles expose responsive `font-size` values through the same CSS custom property for each role, for example:
 
-- `--semantic-text-heading`
+- `--semantic-type-heading-lg-font-size`
+- `--semantic-type-description-normal-font-size`
+- `--semantic-type-button-font-size`
 
-It resolves by layout mode:
+The CSS token implementation resolves those values by layout mode, so components continue to use semantic roles without setting breakpoint-specific font sizes locally.
 
-- `wide` -> `--primitives-type-size-48`
-- `medium` -> `--primitives-type-size-40`
-- `narrow` -> `--primitives-type-size-32`
-
-State tokens are not present in the current `semantic.tokens.json` yet. Storybook keeps a dedicated States page so the category has a documented place when those tokens are added.
+State tokens are not present in the current semantic token export yet. Storybook keeps a dedicated States page so the category has a documented place when those tokens are added.

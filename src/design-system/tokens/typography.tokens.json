@@ -1,0 +1,348 @@
+{
+  "primitives": {
+    "type": {
+      "style": {
+        "text-italic": {
+          "$type": "fontStyle",
+          "$value": "italic"
+        }
+      },
+      "weight": {
+        "regular": {
+          "$type": "fontWeight",
+          "$value": 400
+        },
+        "medium": {
+          "$type": "fontWeight",
+          "$value": 500
+        },
+        "demibold": {
+          "$type": "fontWeight",
+          "$value": 600
+        }
+      },
+      "lineHeight": {
+        "110": {
+          "$type": "lineHeight",
+          "$value": "110%"
+        },
+        "140": {
+          "$type": "lineHeight",
+          "$value": "140%"
+        }
+      }
+    }
+  },
+  "semantic": {
+    "type": {
+      "button": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "{primitives.type.family.primary}"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": "{primitives.type.weight.demibold}"
+        },
+        "fontSize": {
+          "wide": {
+            "$type": "fontSize",
+            "$value": "{primitives.type.size.20}"
+          },
+          "medium": {
+            "$type": "fontSize",
+            "$value": "{primitives.type.size.16}"
+          },
+          "narrow": {
+            "$type": "fontSize",
+            "$value": "{primitives.type.size.16}"
+          }
+        },
+        "lineHeight": {
+          "$type": "lineHeight",
+          "$value": "{primitives.type.lineHeight.110}"
+        },
+        "letterSpacing": {
+          "$type": "letterSpacing",
+          "$value": "{primitives.type.letterSpacing.normal}"
+        }
+      },
+      "decor": {
+        "number": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.decor}"
+          },
+          "fontStyle": {
+            "$type": "fontStyle",
+            "$value": "{primitives.type.style.text-italic}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.regular}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.64}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.60}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.60}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.110}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        },
+        "initial": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.decor}"
+          },
+          "fontStyle": {
+            "$type": "fontStyle",
+            "$value": "{primitives.type.style.text-italic}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.regular}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.32}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.28}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.28}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.110}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        },
+        "heading": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.decor}"
+          },
+          "fontStyle": {
+            "$type": "fontStyle",
+            "$value": "{primitives.type.style.text-italic}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.regular}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.48}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.44}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.44}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.110}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        }
+      },
+      "heading": {
+        "lg": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.medium}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.48}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.44}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.32}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.110}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        },
+        "sm": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.medium}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.28}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.24}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.24}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.140}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        }
+      },
+      "description": {
+        "normal": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.regular}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.24}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.20}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.20}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.140}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        },
+        "accent": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.medium}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.24}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.20}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.20}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.140}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        }
+      },
+      "body": {
+        "normal": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.regular}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.20}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.16}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.16}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.140}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
+        }
+      }
+    }
+  }
+}
