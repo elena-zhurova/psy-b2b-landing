@@ -220,8 +220,8 @@ export function App() {
             <div className="page-surface page-surface--accent page-hero-card">
               <img alt="" src={heroComponent} />
               <div className="page-hero-lines">
-                <p><span>Устойчивость </span><em>людей –</em></p>
-                <p><span>Устойчивость </span><em>команды –</em></p>
+                <p><span>Устойчивость </span><em>людей&nbsp;–</em></p>
+                <p><span>Устойчивость </span><em>команды&nbsp;–</em></p>
                 <p><span>Устойчивость </span><em>бизнеса.</em></p>
               </div>
             </div>
