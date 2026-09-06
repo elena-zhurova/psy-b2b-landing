@@ -18,59 +18,10 @@ textarea {
   overflow-x: clip;
 }
 
-.page-header {
-  background: var(--semantic-color-surface-background-secondary);
-  border-bottom: 1px solid var(--primitives-color-grey-light);
-}
-
-.page-header__inner {
-  align-items: center;
-  display: flex;
-  gap: var(--primitives-spacing-40);
-  min-height: 100px;
-}
-
-.page-brand {
-  align-items: flex-end;
-  color: var(--semantic-color-text-primary);
-  display: inline-flex;
-  gap: var(--primitives-spacing-8);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.page-brand > span:first-child {
-  font-size: var(--primitives-type-size-32);
-  font-weight: var(--primitives-type-weight-demibold);
-  line-height: 1.2;
-}
-
-.page-brand__badge {
-  background: var(--primitives-color-black);
-  border-radius: var(--primitives-radius-9999);
-  color: var(--primitives-color-white);
-  font-size: 14px;
-  line-height: 1;
-  padding: 2px 8px 4px;
-}
-
-.page-header__nav {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  gap: var(--primitives-spacing-20);
-  justify-content: flex-end;
-  white-space: nowrap;
-}
-
-.page-header__nav .ds-link {
-  color: var(--semantic-color-text-primary);
-  text-decoration: none;
-}
-
 .page-section {
   padding-block: var(--semantic-spacing-section-outer-top-lg)
     var(--semantic-spacing-section-outer-bottom-lg);
+  scroll-margin-top: 72px;
 }
 
 .page-section--medium {
@@ -504,38 +455,12 @@ textarea {
 }
 
 @media (max-width: 1279px) {
-  .page-header__inner {
-    gap: var(--primitives-spacing-20);
-    min-height: auto;
-    padding-block: var(--primitives-spacing-20);
-  }
-
-  .page-header__nav {
-    display: none;
-  }
-
-  .page-header__inner > .ds-link--filled {
-    margin-left: auto;
-  }
-
   .page-media-text {
     gap: var(--primitives-spacing-40);
   }
 }
 
 @media (max-width: 640px) {
-  .page-header__inner > .ds-link--filled {
-    display: none;
-  }
-
-  .page-brand > span:first-child {
-    font-size: var(--primitives-type-size-24);
-  }
-
-  .page-brand__badge {
-    font-size: 12px;
-  }
-
   .page-footer__heading {
     overflow-wrap: anywhere;
   }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { Bubble, Button, FAQItem, Link } from './design-system/components';
 import { Container, Grid, SideBySide } from './design-system/layout';
+import { TemporaryHeader } from './components/TemporaryHeader';
 import chartColleagues from './assets/figma-page/chart-colleagues.svg';
 import chartManagement from './assets/figma-page/chart-management.svg';
 import companyBase from './assets/figma-page/company-base.svg';
@@ -185,24 +186,7 @@ export function App() {
 
   return (
     <main className="page">
-      <header className="page-header">
-        <Container className="page-header__inner">
-          <a aria-label="Humanteq" className="page-brand" href="#top">
-            <span>Humanteq</span>
-            <span className="page-brand__badge">для бизнеса</span>
-          </a>
-          <nav aria-label="Навигация по странице" className="page-header__nav">
-            <Link destination="anchor" href="#task">Задача</Link>
-            <Link destination="anchor" href="#gap">Пробел</Link>
-            <Link destination="anchor" href="#solution">Решение</Link>
-            <Link destination="anchor" href="#safety">Безопасность</Link>
-            <Link destination="anchor" href="#start">Как начать</Link>
-            <Link destination="anchor" href="#faq">FAQ</Link>
-            <Link destination="anchor" href="#">Для сотрудников</Link>
-          </nav>
-          <Link destination="anchor" href="#" presentation="filled">Оставить заявку</Link>
-        </Container>
-      </header>
+      <TemporaryHeader />
 
       <section className="page-section page-hero" id="top">
         <Container>
