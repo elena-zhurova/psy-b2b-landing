@@ -23,6 +23,7 @@ import './App.css';
 
 const stats = [
   {
+    href: 'https://nafi.ru/analytics/issledovanie-nafi-tolko-8-rossiyan-pochti-vsegda-chuvstvuyut-sebya-spokoyno/',
     source: 'НАФИ, 2025',
     text: 'россиян часто сталкиваются со стрессом на работе, ещё 34% — время от времени',
     value: '20%',
@@ -34,6 +35,7 @@ const stats = [
     value: '65%',
   },
   {
+    href: 'https://www.cnews.ru/news/line/2026-02-27_dve_treti_kompanij_reshili',
     source: 'hh.ru, 2026',
     text: 'компаний ещё не имеют программ поддержки',
     value: '64%',
@@ -71,7 +73,8 @@ const steps = [
 
 const faqItems = [
   {
-    answer: undefined,
+    answer:
+      'Универсальные модели не имеют специализированной психологической методологии и отдельного контура безопасности для работы с такими запросами. Humanteq учитывает эмоциональное состояние и контекст обращения и подбирает подходящую технику КПТ или ДБТ, а не отвечает произвольно.',
     question: 'Почему сотрудникам недостаточно обычного ChatGPT?',
   },
   {
@@ -275,7 +278,7 @@ export function App() {
                 </div>
               </div>
               <p>Даже там, где доверие внутри команды есть, оно почти не доходит до руководителя. Нужен отдельный, ранний и конфиденциальный уровень помощи.</p>
-              <Link href="https://hh.ru/article/osnovnyye-ugrozy-dlya-psikhichyeskogo-zdorovya-na-rabotye">hh.ru × «Гедеон Рихтер», 2024, n=3 943</Link>
+              <Link href="https://hh.ru/vpncheeck?backUrl=%2Farticle%2Fosnovnyye-ugrozy-dlya-psikhichyeskogo-zdorovya-na-rabotye">hh.ru × «Гедеон Рихтер», 2024, n=3 943</Link>
             </article>
           </SideBySide>
         </Container>
