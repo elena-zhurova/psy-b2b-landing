@@ -7,10 +7,11 @@ import './TemporaryHeader.css';
 
 const navItems = [
   { label: 'B2C', href: undefined },
-  { label: 'Задача', href: '#task' },
-  { label: 'Пробел', href: '#gap' },
+  { label: 'Стресс в команде', href: '#task' },
+  // { label: 'Пробел', href: '#gap' },
   { label: 'Решение', href: '#solution' },
   { label: 'Безопасность', href: '#safety' },
+  { label: 'Результат', href: '#result' },
   { label: 'Как начать', href: '#start' },
   { label: 'FAQ', href: '#faq' },
   {
