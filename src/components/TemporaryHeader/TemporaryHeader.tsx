@@ -29,7 +29,7 @@ export function TemporaryHeader() {
   return (
     <header className="temporary-header">
       <Container className="temporary-header__inner">
-        <a aria-label="Humanteq" className="temporary-header__brand" href="#top" onClick={closeMenu}>
+        <a aria-label="Humanteq" className="temporary-header__brand" href="/" onClick={closeMenu}>
           <img alt="" src={logoB2b} />
         </a>
 

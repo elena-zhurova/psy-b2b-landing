@@ -417,14 +417,14 @@ export function App() {
             </div>
             <div className="page-footer__links">
               <div>
-                <Link destination="anchor" href="#">Написать нам письмо</Link>
-                <Link destination="anchor" href="#">Поддержка</Link>
+                <Link destination="anchor" href="mailto:letsconnect@humanteq.io">Написать нам письмо</Link>
+                <Link destination="anchor" href="https://vk.com/im/convo/-216190593">Поддержка</Link>
                 <span>© 2026&nbsp;Humanteq</span>
               </div>
               <div>
-                <Link destination="anchor" href="#">Согласие на обработку персональных данных</Link>
-                <Link destination="anchor" href="#">Политика конфиденциальности</Link>
-                <Link destination="anchor" href="#">Согласие на рассылку</Link>
+                <Link destination="anchor" href="/consent_user_agreement">Согласие на обработку персональных данных</Link>
+                <Link destination="anchor" href="/user_agreement">Политика конфиденциальности</Link>
+                <Link destination="anchor" href="/sending_electronic_messages">Согласие на рассылку</Link>
               </div>
             </div>
           </Container>
