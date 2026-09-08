@@ -1,28 +1,37 @@
 .ds-link {
-  color: var(--semantic-color-link-default);
+  color: var(--semantic-color-link-accent-default);
   cursor: pointer;
-}
-
-.ds-link--text {
-  text-decoration: underline;
-}
-
-.ds-link--filled {
-  align-items: center;
-  background: var(--semantic-color-button-background-anchor-default);
-  border-radius: var(--semantic-button-radius);
-  display: inline-flex;
-  justify-content: center;
-  padding: var(--semantic-button-padding-y) var(--semantic-button-padding-x);
   text-decoration: none;
 }
 
-.ds-link:hover,
-.ds-link--hover {
-  color: var(--semantic-color-link-hover);
+.ds-link--accent-underlined {
+  text-decoration: underline;
 }
 
-.ds-link:active,
-.ds-link--active {
-  color: var(--semantic-color-link-active);
+.ds-link--neutral {
+  color: var(--semantic-color-link-neutral-default);
+}
+
+.ds-link--accent:hover,
+.ds-link--accent-underlined:hover,
+.ds-link--accent.ds-link--hover,
+.ds-link--accent-underlined.ds-link--hover {
+  color: var(--semantic-color-link-accent-hover);
+}
+
+.ds-link--accent:active,
+.ds-link--accent-underlined:active,
+.ds-link--accent.ds-link--active,
+.ds-link--accent-underlined.ds-link--active {
+  color: var(--semantic-color-link-accent-active);
+}
+
+.ds-link--neutral:hover,
+.ds-link--neutral.ds-link--hover {
+  color: var(--semantic-color-link-neutral-hover);
+}
+
+.ds-link--neutral:active,
+.ds-link--neutral.ds-link--active {
+  color: var(--semantic-color-link-neutral-active);
 }

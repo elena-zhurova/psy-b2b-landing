@@ -12,7 +12,7 @@ const meta = {
     children: 'Узнать больше',
     destination: 'external',
     href: 'https://humanteq.io',
-    presentation: 'text',
+    presentation: 'accent-underlined',
     state: 'default',
   },
 } satisfies Meta<typeof Link>;
@@ -20,35 +20,72 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const TextExternal: Story = {};
+export const AccentUnderlinedExternal: Story = {};
 
-export const FilledAnchor: Story = {
+export const AccentAnchor: Story = {
   args: {
     destination: 'anchor',
     href: '#form',
-    presentation: 'filled',
+    presentation: 'accent',
+  },
+};
+
+export const NeutralAnchor: Story = {
+  args: {
+    destination: 'anchor',
+    href: '#form',
+    presentation: 'neutral',
   },
 };
 
 export const States: Story = {
   render: () => (
     <div style={{ display: 'grid', gap: '20px' }}>
-      <Link href="https://humanteq.io">Default text external</Link>
-      <Link href="https://humanteq.io" state="hover">
-        Hover text external
-      </Link>
-      <Link href="https://humanteq.io" state="active">
-        Active text external
-      </Link>
-      <Link destination="anchor" href="#form" presentation="filled">
-        Default filled anchor
-      </Link>
-      <Link destination="anchor" href="#form" presentation="filled" state="hover">
-        Hover filled anchor
-      </Link>
-      <Link destination="anchor" href="#form" presentation="filled" state="active">
-        Active filled anchor
-      </Link>
+      {(['accent', 'accent-underlined', 'neutral'] as const).map((presentation) => (
+        <div
+          key={presentation}
+          style={{
+            alignItems: 'center',
+            display: 'grid',
+            gap: '20px',
+            gridTemplateColumns: '160px repeat(3, 1fr)',
+          }}
+        >
+          <strong>{presentation}</strong>
+          <Link href="https://humanteq.io" presentation={presentation}>Default</Link>
+          <Link href="https://humanteq.io" presentation={presentation} state="hover">Hover</Link>
+          <Link href="https://humanteq.io" presentation={presentation} state="active">Active</Link>
+        </div>
+      ))}
+    </div>
+  ),
+};
+
+export const InheritedTypography: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '24px', maxWidth: '720px' }}>
+      <p
+        style={{
+          fontFamily: 'var(--semantic-type-body-normal-font-family)',
+          fontSize: 'var(--semantic-type-body-normal-font-size)',
+          fontWeight: 'var(--semantic-type-body-normal-font-weight)',
+          lineHeight: 'var(--semantic-type-body-normal-line-height)',
+          margin: 0,
+        }}
+      >
+        Body context: <Link href="https://humanteq.io" presentation="accent-underlined">accent underlined link</Link>
+      </p>
+      <p
+        style={{
+          fontFamily: 'var(--semantic-type-heading-sm-font-family)',
+          fontSize: 'var(--semantic-type-heading-sm-font-size)',
+          fontWeight: 'var(--semantic-type-heading-sm-font-weight)',
+          lineHeight: 'var(--semantic-type-heading-sm-line-height)',
+          margin: 0,
+        }}
+      >
+        Heading context: <Link href="https://humanteq.io" presentation="neutral">neutral link</Link>
+      </p>
     </div>
   ),
 };

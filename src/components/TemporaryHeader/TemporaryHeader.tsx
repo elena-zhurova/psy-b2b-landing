@@ -52,7 +52,7 @@ export function TemporaryHeader() {
           )}
         </nav>
 
-        <Link className="temporary-header__cta" destination="anchor" href="#start" presentation="filled">
+        <Link className="temporary-header__cta" destination="anchor" href="#start" presentation="neutral">
           Оставить заявку
         </Link>
 
@@ -97,7 +97,7 @@ export function TemporaryHeader() {
             destination="anchor"
             href="#start"
             onClick={closeMenu}
-            presentation="filled"
+            presentation="neutral"
           >
             Оставить заявку
           </Link>

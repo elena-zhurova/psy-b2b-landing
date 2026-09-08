@@ -17,10 +17,10 @@
 }
 
 .ds-button--primary {
-  background: var(--semantic-color-button-background-primary-default);
-  color: var(--semantic-color-button-text-primary-default);
+  background: var(--semantic-color-button-primary-background-default);
+  color: var(--semantic-color-button-primary-text-default);
 }
 
 .ds-button--primary:hover {
-  color: var(--semantic-color-button-text-primary-hover);
+  color: var(--semantic-color-button-primary-text-hover);
 }

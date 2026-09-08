@@ -201,7 +201,7 @@ export function App() {
               />
               <div className="page-button-row">
                 <Button>Обсудить запуск</Button>
-                <Link destination="anchor" href="#solution" presentation="filled">Что такое Humanteq</Link>
+                <Link destination="anchor" href="#solution" presentation="accent">Что такое Humanteq</Link>
               </div>
             </div>
             <div className="page-surface page-surface--accent page-hero-card">
@@ -301,7 +301,7 @@ export function App() {
             <article className="page-surface page-surface--accent page-firstline-card">
               <img alt="" src={firstLineComponent} />
               <h3>Специализированный психологический ИИ, а не универсальный чат.</h3>
-              <Link destination="anchor" href="#faq-chatgpt" presentation="filled">Чем мы отличаемся от ChatGPT</Link>
+              <Link destination="anchor" href="#faq-chatgpt" presentation="accent">Чем мы отличаемся от ChatGPT</Link>
             </article>
           </SideBySide>
         </Container>

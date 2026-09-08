@@ -12,10 +12,11 @@ const tokenFiles = {
   primitives: path.join(tokensDir, 'primitives.tokens.json'),
   typography: path.join(tokensDir, 'typography.tokens.json'),
   localColor: path.join(tokensDir, 'local.color.tokens.json'),
+  semanticColors: path.join(tokensDir, 'semantic colors.tokens.json'),
 };
 
 const responsiveConfigPath = path.join(tokensDir, 'responsive.config.json');
-const semanticModeDir = path.join(tokensDir, 'semantic');
+const semanticSizesModeDir = path.join(tokensDir, 'semantic sizes');
 
 const fontFaces = [
   {
@@ -59,10 +60,10 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-function semanticModeFile(mode) {
+function semanticModeFile(mode, modeDir) {
   const candidates = [
-    path.join(semanticModeDir, `${mode}.json`),
-    path.join(semanticModeDir, `${mode}.tokens.json`),
+    path.join(modeDir, `${mode}.json`),
+    path.join(modeDir, `${mode}.tokens.json`),
   ];
   const file = candidates.find((candidate) => fs.existsSync(candidate));
   if (!file) {
@@ -83,6 +84,12 @@ function merge(target, source) {
   return target;
 }
 
+function withoutTokenMetadata(source) {
+  return Object.fromEntries(
+    Object.entries(source ?? {}).filter(([key]) => !key.startsWith('$')),
+  );
+}
+
 function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
@@ -99,8 +106,26 @@ function cssName(pathParts) {
   return `--${pathParts.map(kebab).join('-')}`;
 }
 
-function tokenRefToCssVar(ref) {
-  return `var(${cssName(ref.split('.'))})`;
+function normalizeTokenRef(ref, pathParts) {
+  const normalized = ref.replaceAll('/', '.');
+
+  if (normalized.startsWith('primitives.') || normalized.startsWith('semantic.')) {
+    return normalized;
+  }
+
+  if (pathParts[0] === 'semantic' && pathParts[1] === 'color') {
+    return `semantic.color.${normalized}`;
+  }
+
+  return normalized;
+}
+
+function tokenRefToCssVar(ref, pathParts) {
+  return `var(${cssName(normalizeTokenRef(ref, pathParts).split('.'))})`;
+}
+
+function figmaAliasRef(token) {
+  return token.$extensions?.['com.figma.aliasData']?.targetVariableName;
 }
 
 function formatCssValue(token, pathParts) {
@@ -108,10 +133,13 @@ function formatCssValue(token, pathParts) {
 
   if (typeof value === 'string') {
     const alias = value.match(/^\{([^}]+)\}$/);
-    if (alias) return tokenRefToCssVar(alias[1]);
+    if (alias) return tokenRefToCssVar(alias[1], pathParts);
     if (token.$type === 'fontFamily') return `'${value}'`;
     return value;
   }
+
+  const figmaAlias = figmaAliasRef(token);
+  if (figmaAlias) return tokenRefToCssVar(figmaAlias, pathParts);
 
   if (typeof value === 'number') {
     if (token.$type === 'fontWeight' || token.$type === 'letterSpacing') {
@@ -257,10 +285,11 @@ function buildPrimitivesCss(primitives, responsiveConfig) {
   ].join('\n');
 }
 
-function buildSemanticCss(semanticModes, typographySemantic, responsiveConfig) {
-  const narrowEntries = collectTokens(semanticModes.narrow);
-  const mediumEntries = entriesByName(collectTokens(semanticModes.medium));
-  const wideEntries = entriesByName(collectTokens(semanticModes.wide));
+function buildSemanticCss(semanticColors, semanticSizeModes, typographySemantic, responsiveConfig) {
+  const colorEntries = collectTokens(semanticColors);
+  const narrowEntries = collectTokens(semanticSizeModes.narrow);
+  const mediumEntries = entriesByName(collectTokens(semanticSizeModes.medium));
+  const wideEntries = entriesByName(collectTokens(semanticSizeModes.wide));
   const baseSemantic = [];
   const responsiveSemantic = [];
 
@@ -295,6 +324,7 @@ function buildSemanticCss(semanticModes, typographySemantic, responsiveConfig) {
     "@import './primitives.css';",
     '',
     ':root {',
+    ...colorEntries.map(declaration),
     ...baseSemantic.map(declaration),
     ...responsiveSemantic.map((entry) => baseResponsiveDeclaration(entry.pathParts, entry.narrow)),
     ...typographyOutput.map(declaration),
@@ -321,21 +351,26 @@ function buildSemanticCss(semanticModes, typographySemantic, responsiveConfig) {
 const primitivesJson = readJson(tokenFiles.primitives);
 const typographyJson = readJson(tokenFiles.typography);
 const localColorJson = readJson(tokenFiles.localColor);
+const semanticColorsJson = readJson(tokenFiles.semanticColors);
 const responsiveConfig = readJson(responsiveConfigPath);
-const semanticModeJson = {
-  narrow: readJson(semanticModeFile('narrow')),
-  medium: readJson(semanticModeFile('medium')),
-  wide: readJson(semanticModeFile('wide')),
+const semanticSizeModeJson = {
+  narrow: readJson(semanticModeFile('narrow', semanticSizesModeDir)),
+  medium: readJson(semanticModeFile('medium', semanticSizesModeDir)),
+  wide: readJson(semanticModeFile('wide', semanticSizesModeDir)),
 };
 
 const primitiveSources = merge(
   merge(merge({}, primitivesJson.primitives), typographyJson.primitives),
   localColorJson.primitives,
 );
-const semanticModeSources = Object.fromEntries(
-  Object.entries(semanticModeJson).map(([mode, json]) => [
+const semanticColorSources = merge(
+  { semantic: { color: merge({}, semanticColorsJson.semantic?.color ?? withoutTokenMetadata(semanticColorsJson)) } },
+  localColorJson.semantic ? { semantic: localColorJson.semantic } : {},
+);
+const semanticSizeModeSources = Object.fromEntries(
+  Object.entries(semanticSizeModeJson).map(([mode, json]) => [
     mode,
-    { semantic: merge(merge({}, json.semantic), localColorJson.semantic) },
+    { semantic: merge({}, json.semantic) },
   ]),
 );
 
@@ -345,5 +380,5 @@ fs.writeFileSync(
 );
 fs.writeFileSync(
   path.join(tokensDir, 'semantic.css'),
-  buildSemanticCss(semanticModeSources, { semantic: typographyJson.semantic }, responsiveConfig),
+  buildSemanticCss(semanticColorSources, semanticSizeModeSources, { semantic: typographyJson.semantic }, responsiveConfig),
 );

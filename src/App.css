@@ -73,15 +73,6 @@ textarea {
   gap: var(--primitives-spacing-8);
 }
 
-.page .ds-link--filled {
-  font-family: var(--semantic-type-button-font-family);
-  font-size: var(--semantic-type-button-font-size);
-  font-weight: var(--semantic-type-button-font-weight);
-  letter-spacing: var(--semantic-type-button-letter-spacing);
-  line-height: var(--semantic-type-button-line-height);
-  text-align: center;
-}
-
 .page-surface,
 .page-stat-card,
 .page-step-card {
@@ -170,7 +161,7 @@ textarea {
 }
 
 .page-source {
-  color: var(--semantic-color-link-default);
+  color: var(--semantic-color-link-accent-default);
   text-decoration: underline;
 }
 
@@ -328,7 +319,7 @@ textarea {
 }
 
 .page-step-card span {
-  color: var(--semantic-color-text-decor);
+  color: var(--semantic-color-text-tertiary);
   font-family: var(--semantic-type-decor-heading-font-family);
   font-size: var(--semantic-type-decor-heading-font-size);
   font-style: var(--semantic-type-decor-heading-font-style);
@@ -389,7 +380,7 @@ textarea {
 }
 
 .page-footer__links {
-  color: var(--semantic-color-link-default);
+  color: var(--semantic-color-link-accent-default);
   display: flex;
   gap: var(--primitives-spacing-40);
   width: 100%;

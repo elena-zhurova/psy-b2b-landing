@@ -309,6 +309,25 @@
           ]
         }
       },
+      "grey-10": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.5847543478012085,
+            0.5847543478012085,
+            0.5847543478012085
+          ],
+          "alpha": 0.10000000149011612,
+          "hex": "#959595"
+        },
+        "$extensions": {
+          "com.figma.variableId": "VariableID:405:3276",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      },
       "grey-light": {
         "$type": "color",
         "$value": {
@@ -380,6 +399,63 @@
         },
         "$extensions": {
           "com.figma.variableId": "VariableID:200:846",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      },
+      "red": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            0,
+            0
+          ],
+          "alpha": 1,
+          "hex": "#FF0000"
+        },
+        "$extensions": {
+          "com.figma.variableId": "VariableID:404:1964",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      },
+      "red-10": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            0,
+            0
+          ],
+          "alpha": 0.10000000149011612,
+          "hex": "#FF0000"
+        },
+        "$extensions": {
+          "com.figma.variableId": "VariableID:404:1966",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      },
+      "white-60": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ],
+          "alpha": 0.6000000238418579,
+          "hex": "#FFFFFF"
+        },
+        "$extensions": {
+          "com.figma.variableId": "VariableID:404:2150",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ]

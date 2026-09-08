@@ -14,10 +14,11 @@
 
 `Link` отвечает за:
 
-- навигационную семантику;
 - `Presentation`;
 - `Destination`;
 - `State`;
+- цвет ссылки через соответствующие semantic color tokens;
+- наличие или отсутствие underline;
 - поведение курсора.
 
 ---
@@ -39,35 +40,43 @@
 
 ## Основные понятия
 
-`Link` описывается через три независимых понятия: `Presentation`, `Destination` и `State`.
+`Link` описывается через три независимых понятия:
+
+- `Presentation` — как ссылка выглядит;
+- `Destination` — куда ссылка ведёт;
+- `State` — в каком интерактивном состоянии находится ссылка.
 
 ### Presentation
 
-`Presentation` (представление) определяет, **как ссылка выглядит**.
+`Presentation` определяет визуальное представление ссылки.
 
-`Presentation` отвечает только за визуальное представление ссылки и не определяет, куда она ведёт.
+Текущие варианты:
 
-Текущие представления:
+- `Accent`
+- `Accent Underlined`
+- `Neutral`
 
-- `Text`
-- `Filled`
+`Presentation` определяет:
+
+- какую semantic color role использует ссылка;
+- отображается ли underline.
+
+`Presentation` не определяет типографику и не зависит от назначения ссылки.
 
 ### Destination
 
-`Destination` (назначение) определяет, **куда ведёт ссылка**.
-
-`Destination` описывает тип назначения и не влияет на визуальное представление ссылки.
+`Destination` определяет, куда ведёт ссылка.
 
 Текущие типы:
 
 - `External` — внешний ресурс;
 - `Anchor` — якорь внутри текущей страницы.
 
+`Destination` не влияет на визуальное представление ссылки.
+
 ### State
 
-`State` (состояние) определяет, **в каком интерактивном состоянии находится ссылка в данный момент**.
-
-`State` описывает временные изменения при взаимодействии пользователя со ссылкой и не меняет её семантику или назначение.
+`State` определяет текущее интерактивное состояние ссылки.
 
 Текущие состояния:
 
@@ -75,27 +84,115 @@
 - `Hover`
 - `Active`
 
+`State` определяет, какой semantic color token используется внутри соответствующей цветовой роли.
+
 ---
 
 ## Presentation
 
-### Text
+### Accent
 
-Текстовое представление ссылки.
+Акцентное представление ссылки без underline.
 
 Характеристики:
 
+- используется цветовая роль `Accent`;
+- underline отсутствует;
+- типографика наследуется от окружающего контекста.
+
+Цвет определяется токенами:
+
+```text
+semantic/color/link/accent/default
+semantic/color/link/accent/hover
+semantic/color/link/accent/active
+```
+
+`Accent` может использоваться для самостоятельных акцентных ссылок независимо от их размера и типографики.
+
+---
+
+### Accent Underlined
+
+Акцентное представление ссылки с underline.
+
+Характеристики:
+
+- используется та же цветовая роль `Accent`;
 - underline отображается всегда;
 - типографика наследуется от окружающего контекста.
 
-### Filled
+Цвет определяется теми же токенами:
 
-Ссылка, визуально представленная как элемент с фоновой заливкой.
+```text
+semantic/color/link/accent/default
+semantic/color/link/accent/hover
+semantic/color/link/accent/active
+```
+
+Underline не изменяется между состояниями `Default`, `Hover` и `Active`.
+
+---
+
+### Neutral
+
+Нейтральное представление ссылки без underline.
 
 Характеристики:
 
+- используется цветовая роль `Neutral`;
 - underline отсутствует;
 - типографика наследуется от окружающего контекста.
+
+Цвет определяется токенами:
+
+```text
+semantic/color/link/neutral/default
+semantic/color/link/neutral/hover
+semantic/color/link/neutral/active
+```
+
+`Neutral` предназначен для случаев, когда ссылка должна сохранять навигационную семантику, но не должна визуально восприниматься как акцентная текстовая ссылка.
+
+---
+
+## Color roles
+
+Цветовая семантика `Link` разделена на две роли:
+
+```text
+Accent
+Neutral
+```
+
+Каждая роль имеет три интерактивных состояния.
+
+### Accent
+
+```text
+Default → semantic/color/link/accent/default
+Hover   → semantic/color/link/accent/hover
+Active  → semantic/color/link/accent/active
+```
+
+Используется представлениями:
+
+- `Accent`
+- `Accent Underlined`
+
+### Neutral
+
+```text
+Default → semantic/color/link/neutral/default
+Hover   → semantic/color/link/neutral/hover
+Active  → semantic/color/link/neutral/active
+```
+
+Используется представлением:
+
+- `Neutral`
+
+Цветовые токены не определяют underline или типографику.
 
 ---
 
@@ -103,53 +200,133 @@
 
 `Presentation` и `Destination` являются независимыми параметрами.
 
-На данный момент в проекте используются:
+Любое представление может использоваться с любым поддерживаемым назначением:
 
 ```text
-Text   + External
-Filled + Anchor
+Accent            + Anchor
+Accent            + External
+
+Accent Underlined + Anchor
+Accent Underlined + External
+
+Neutral           + Anchor
+Neutral           + External
 ```
 
-Архитектура допускает другие комбинации при появлении соответствующей потребности:
+Выбор `Destination` сам по себе не изменяет:
 
-```text
-Text   + Anchor
-Filled + External
-```
+- цветовую роль;
+- underline;
+- типографику.
 
-Изменение `Destination` само по себе не изменяет `Presentation`.
+В частности, `Anchor` не является отдельным визуальным представлением ссылки.
 
 ---
 
 ## State
 
-Цвет ссылки определяется semantic token соответствующего состояния.
-
 ### Default
 
 Базовое состояние ссылки.
 
-`color` → `semantic/color/link/default`
+Цвет определяется `Presentation`:
+
+```text
+Accent
+Accent Underlined
+→ semantic/color/link/accent/default
+
+Neutral
+→ semantic/color/link/neutral/default
+```
 
 ### Hover
 
 Состояние при наведении курсора.
 
-`color` → `semantic/color/link/hover`
+Цвет определяется `Presentation`:
 
-Дополнительно изменяется:
+```text
+Accent
+Accent Underlined
+→ semantic/color/link/accent/hover
 
-- курсор → `pointer`.
+Neutral
+→ semantic/color/link/neutral/hover
+```
 
-Underline не изменяется.
+Дополнительно:
+
+```text
+cursor: pointer
+```
+
+Наличие underline не изменяется.
 
 ### Active
 
 Состояние во время нажатия.
 
-`color` → `semantic/color/link/active`
+Цвет определяется `Presentation`:
 
-Underline не изменяется.
+```text
+Accent
+Accent Underlined
+→ semantic/color/link/accent/active
+
+Neutral
+→ semantic/color/link/neutral/active
+```
+
+Наличие underline не изменяется.
+
+---
+
+## Типографика
+
+`Link` не определяет собственную типографику.
+
+Типографика задаётся текстом, к которому применяется `Link`, и наследуется компонентом.
+
+Поэтому одно и то же представление `Link` может использоваться с разными текстовыми стилями в зависимости от контекста.
+
+Например, `Accent` может использоваться:
+
+- в body-тексте;
+- в heading;
+- как крупная самостоятельная ссылка;
+- внутри другого компонента.
+
+Изменение `Presentation`, `Destination` или `State` не должно автоматически изменять типографику.
+
+---
+
+## Underline
+
+Underline является частью `Presentation`, а не цветовой роли или `State`.
+
+| Presentation | Color role | Underline |
+|---|---|---|
+| `Accent` | `Accent` | нет |
+| `Accent Underlined` | `Accent` | всегда |
+| `Neutral` | `Neutral` | нет |
+
+Underline не изменяется между состояниями `Default`, `Hover` и `Active`.
+
+---
+
+## Навигационная семантика
+
+Визуальное оформление элемента не определяет его семантику.
+
+Если элемент выполняет навигацию, он является `Link`, даже если визуально выглядит как самостоятельный крупный элемент или как кнопка.
+
+`Button` используется для действий.
+
+`Link` используется для переходов.
+
+Поэтому якорная ссылка не становится `Button` только из-за своего визуального оформления.
+
 ---
 
 ## Не определено
@@ -160,33 +337,6 @@ Underline не изменяется.
 - `Disabled`
 
 Они могут быть добавлены позже при появлении подтверждённой продуктовой потребности.
-
----
-
-## Типографика
-
-`Link` не определяет собственную типографику.
-
-Типографика наследуется от окружающего контекста.
-
-Например, ссылка может наследовать типографику:
-
-- body-текста;
-- heading;
-- текста элемента с представлением `Filled`.
-
----
-
-## Underline
-
-Наличие underline определяется `Presentation`.
-
-| Presentation | Underline |
-|---|---|
-| `Text` | всегда |
-| `Filled` | отсутствует |
-
-Underline не изменяется между состояниями `Default`, `Hover` и `Active`.
 
 ---
 
@@ -204,9 +354,10 @@ cursor: pointer
 
 Этот документ не определяет:
 
+- конкретный текстовый стиль ссылки;
 - как `Destination` хранится в Figma;
 - как `Destination` передаётся из Figma в код;
 - реализацию routing;
 - технический способ выполнения навигации.
 
-Эти решения относятся к слою реализации, а не к спецификации `Link`.
+Эти решения относятся к другим слоям дизайн-системы или реализации, а не к спецификации `Link`.

@@ -91,7 +91,7 @@ Figma / локально поддерживаемые token sources → JSON-т�
 
 Правила:
 
-- `primitives.tokens.json`, `semantic/*.tokens.json`, `typography.tokens.json` и `local.color.tokens.json` являются источниками design tokens.
+- `primitives.tokens.json`, `semantic colors.tokens.json`, `semantic sizes/*.tokens.json`, `typography.tokens.json` и `local.color.tokens.json` являются источниками design tokens.
 - `primitives.css` и `semantic.css` генерируются автоматически и не редактируются вручную.
 - После изменения JSON-токенов необходимо запустить `pnpm tokens:build`.
 - Semantic tokens должны ссылаться на primitives там, где соответствующий primitive существует.

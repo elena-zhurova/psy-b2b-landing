@@ -6,12 +6,16 @@ const colorTokens = [
   { name: '--primitives-color-blue-light', value: '#C2E5FD' },
   { name: '--primitives-color-blue-superlight', value: '#D8EFFF' },
   { name: '--primitives-color-grey', value: '#959595' },
+  { name: '--primitives-color-grey-10', value: '#959595 / 10%' },
   { name: '--primitives-color-grey-light', value: '#E0E0E0' },
   { name: '--primitives-color-grey-superlight', value: '#F7F7F7' },
+  { name: '--primitives-color-red', value: '#FF0000' },
+  { name: '--primitives-color-red-10', value: '#FF0000 / 10%' },
   { name: '--primitives-color-sapphire', value: '#005DA0' },
   { name: '--primitives-color-sapphire-light', value: '#007FDA' },
   { name: '--primitives-color-transparent', value: 'transparent' },
   { name: '--primitives-color-white', value: '#FFFFFF' },
+  { name: '--primitives-color-white-60', value: '#FFFFFF / 60%' },
   { name: '--primitives-color-gradient', value: 'gradient' },
 ];
 

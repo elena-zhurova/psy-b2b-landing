@@ -43,7 +43,7 @@ const SemanticSpacing = () => (
         <div
           aria-label={`${token.name}: ${token.value}`}
           style={{
-            background: 'var(--semantic-color-text-decor)',
+            background: 'var(--semantic-color-text-tertiary)',
             borderRadius: '2px',
             height: '24px',
             width: `var(${token.name})`,

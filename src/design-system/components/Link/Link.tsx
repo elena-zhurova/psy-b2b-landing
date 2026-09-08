@@ -2,7 +2,7 @@ import type { AnchorHTMLAttributes, ReactNode } from 'react';
 
 import './Link.css';
 
-export type LinkPresentation = 'text' | 'filled';
+export type LinkPresentation = 'accent' | 'accent-underlined' | 'neutral';
 export type LinkDestination = 'external' | 'anchor';
 export type LinkState = 'default' | 'hover' | 'active';
 
@@ -23,7 +23,7 @@ export function Link({
   className,
   destination = 'external',
   href,
-  presentation = 'text',
+  presentation = 'accent-underlined',
   state = 'default',
   ...props
 }: LinkProps) {

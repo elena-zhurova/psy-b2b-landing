@@ -65,10 +65,14 @@
   --primitives-color-blue-light: #c2e5fd;
   --primitives-color-blue-superlight: #d8efff;
   --primitives-color-grey: #959595;
+  --primitives-color-grey-10: rgb(149 149 149 / 0.1);
   --primitives-color-grey-light: #e0e0e0;
   --primitives-color-grey-superlight: #f7f7f7;
   --primitives-color-white: #ffffff;
   --primitives-color-transparent: rgb(255 255 255 / 0);
+  --primitives-color-red: #ff0000;
+  --primitives-color-red-10: rgb(255 0 0 / 0.1);
+  --primitives-color-white-60: rgb(255 255 255 / 0.6);
   --primitives-color-gradient: radial-gradient(61.8% 327.1% at 38.9% 0%, #D8EFFF 0%, #98CCF1 74.5%);
   --primitives-radius-8: 8px;
   --primitives-radius-20: 20px;

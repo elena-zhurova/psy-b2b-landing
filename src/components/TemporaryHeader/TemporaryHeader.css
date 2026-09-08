@@ -53,8 +53,8 @@
 
 .temporary-header__cta,
 .temporary-header__mobile-cta {
-  background: var(--semantic-color-button-background-primary-default);
-  color: var(--semantic-color-button-text-primary-default);
+  background: var(--semantic-color-button-primary-background-default);
+  color: var(--semantic-color-button-primary-text-default);
   font-family: var(--semantic-type-button-font-family);
   font-size: var(--primitives-type-size-16);
   font-weight: var(--semantic-type-button-font-weight);
@@ -65,7 +65,7 @@
 
 .temporary-header__cta:hover,
 .temporary-header__mobile-cta:hover {
-  color: var(--semantic-color-button-text-primary-hover);
+  color: var(--semantic-color-button-primary-text-hover);
 }
 
 .temporary-header__burger {
@@ -145,7 +145,7 @@
 
 .temporary-header__mobile-menu .temporary-header__mobile-cta {
   align-self: flex-start;
-  color: var(--semantic-color-button-text-primary-default);
+  color: var(--semantic-color-button-primary-text-default);
   font-family: var(--semantic-type-button-font-family);
   font-size: var(--semantic-type-button-font-size);
   font-weight: var(--semantic-type-button-font-weight);
