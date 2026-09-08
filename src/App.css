@@ -245,7 +245,7 @@ textarea {
   width: 6px;
 }
 
-.page-problem-card {
+.page-late-intervention-card {
   align-items: center;
 }
 
@@ -271,7 +271,7 @@ textarea {
   width: 140px;
 }
 
-.page-firstline-card > img {
+.page-solution-card > img {
   height: 134px;
   object-fit: contain;
   width: 134px;

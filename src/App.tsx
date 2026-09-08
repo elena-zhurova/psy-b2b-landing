@@ -8,7 +8,7 @@ import chartManagement from './assets/figma-page/chart-management.svg';
 import companyBase from './assets/figma-page/company-base.svg';
 import companyOverlay from './assets/figma-page/company-overlay.svg';
 import employeeAsset from './assets/figma-page/employee.svg';
-import firstLineComponent from './assets/figma-page/firstline-component-2.svg';
+import solutionComponent from './assets/figma-page/solution-component.svg';
 import footerDot from './assets/figma-page/footer-dot.svg';
 import footerEllipse from './assets/figma-page/footer-ellipse.svg';
 import footerGroupLeft from './assets/figma-page/footer-group-left.svg';
@@ -17,7 +17,7 @@ import footerGroupRight from './assets/figma-page/footer-group-right.svg';
 import footerLine from './assets/figma-page/footer-line.svg';
 import heroComponent from './assets/figma-page/hero-component-5.svg';
 import listMarker from './assets/figma-page/list-marker.svg';
-import psyLotti from './assets/figma-page/psy-lotti.svg';
+import psyInformationLotti from './assets/figma-page/psy-lotti.svg';
 import validationLotti from './assets/figma-page/validation-lotti.svg';
 import './App.css';
 
@@ -48,7 +48,7 @@ const stats = [
   },
 ];
 
-const firstLineBubbles = [
+const solutionBubbles = [
   'Перегрузка',
   'Конфликт',
   'Тревога',
@@ -191,7 +191,7 @@ export function App() {
     <main className="page">
       <TemporaryHeader />
 
-      <section className="page-section page-hero" id="top">
+      <section className="page-section page-hero" id="hero">
         <Container>
           <SideBySide variant="equal">
             <div className="page-region">
@@ -216,7 +216,7 @@ export function App() {
         </Container>
       </section>
 
-      <section className="page-section" id="task">
+      <section className="page-section" id="stats">
         <Container>
           <SectionHeading title="Стресс и нагрузка уже влияют на работоспособность бизнеса" />
           <Grid className="page-stats-grid">
@@ -237,10 +237,10 @@ export function App() {
         </Container>
       </section>
 
-      <section className="page-section page-section--medium" id="gap">
+      <section className="page-section page-section--medium" id="psy-information">
         <Container>
           <div className="page-media-text">
-            <MediaSquareSmall src={psyLotti} />
+            <MediaSquareSmall src={psyInformationLotti} />
             <div>
               <h2>Психологическое состояние — не только личный вопрос сотрудника.</h2>
               <p>Нагрузка и неопределённость снижают концентрацию, качество решений и способность восстанавливаться — а значит, становятся одним из факторов работоспособности команды.</p>
@@ -249,7 +249,7 @@ export function App() {
         </Container>
       </section>
 
-      <section className="page-section">
+      <section className="page-section" id="late-intervention">
         <Container>
           <SideBySide variant="equal">
             <div className="page-region">
@@ -263,7 +263,7 @@ export function App() {
                 <li><img alt="" src={listMarker} />Управленческую и психологическую роли важно разделять</li>
               </ul>
             </div>
-            <article className="page-surface page-problem-card">
+            <article className="page-surface page-late-intervention-card">
               <h3>Готовность обсуждать психические проблемы</h3>
               <div className="page-chart-row">
                 <div>
@@ -293,13 +293,13 @@ export function App() {
                 title="Humanteq – первая линия психологической поддержки 24/7"
               />
               <div className="page-bubble-list">
-                {firstLineBubbles.map((bubble) => (
+                {solutionBubbles.map((bubble) => (
                   <Bubble key={bubble} size="md">{bubble}</Bubble>
                 ))}
               </div>
             </div>
-            <article className="page-surface page-surface--accent page-firstline-card">
-              <img alt="" src={firstLineComponent} />
+            <article className="page-surface page-surface--accent page-solution-card">
+              <img alt="" src={solutionComponent} />
               <h3>Специализированный психологический ИИ, а не универсальный чат.</h3>
               <Link className="page-anchor-link" destination="anchor" href="#faq-chatgpt" presentation="accent">Чем мы отличаемся от ChatGPT</Link>
             </article>
@@ -340,7 +340,7 @@ export function App() {
         </Container>
       </section>
 
-      <section className="page-section page-section--medium">
+      <section className="page-section page-section--medium" id="validation">
         <Container>
           <div className="page-media-text">
             <MediaSquareSmall src={validationLotti} />
