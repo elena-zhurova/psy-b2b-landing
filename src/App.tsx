@@ -201,7 +201,7 @@ export function App() {
               />
               <div className="page-button-row">
                 <Button>Обсудить запуск</Button>
-                <Link destination="anchor" href="#solution" presentation="accent">Что такое Humanteq</Link>
+                <Link className="page-anchor-link" destination="anchor" href="#solution" presentation="accent">Что такое Humanteq</Link>
               </div>
             </div>
             <div className="page-surface page-surface--accent page-hero-card">
@@ -301,7 +301,7 @@ export function App() {
             <article className="page-surface page-surface--accent page-firstline-card">
               <img alt="" src={firstLineComponent} />
               <h3>Специализированный психологический ИИ, а не универсальный чат.</h3>
-              <Link destination="anchor" href="#faq-chatgpt" presentation="accent">Чем мы отличаемся от ChatGPT</Link>
+              <Link className="page-anchor-link" destination="anchor" href="#faq-chatgpt" presentation="accent">Чем мы отличаемся от ChatGPT</Link>
             </article>
           </SideBySide>
         </Container>
@@ -417,14 +417,14 @@ export function App() {
             </div>
             <div className="page-footer__links">
               <div>
-                <Link destination="anchor" href="mailto:letsconnect@humanteq.io">Написать нам письмо</Link>
-                <Link destination="anchor" href="https://vk.com/im/convo/-216190593">Поддержка</Link>
+                <Link destination="anchor" href="mailto:letsconnect@humanteq.io" presentation="neutral">Написать нам письмо</Link>
+                <Link destination="anchor" href="https://vk.com/im/convo/-216190593" presentation="neutral">Поддержка</Link>
                 <span>© 2026&nbsp;Humanteq</span>
               </div>
               <div>
-                <Link destination="anchor" href="/consent_user_agreement">Согласие на обработку персональных данных</Link>
-                <Link destination="anchor" href="/user_agreement">Политика конфиденциальности</Link>
-                <Link destination="anchor" href="/sending_electronic_messages">Согласие на рассылку</Link>
+                <Link destination="anchor" href="/consent_user_agreement" presentation="neutral">Согласие на обработку персональных данных</Link>
+                <Link destination="anchor" href="/user_agreement" presentation="neutral">Политика конфиденциальности</Link>
+                <Link destination="anchor" href="/sending_electronic_messages" presentation="neutral">Согласие на рассылку</Link>
               </div>
             </div>
           </Container>

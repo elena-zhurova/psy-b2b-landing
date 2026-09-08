@@ -73,6 +73,19 @@ textarea {
   gap: var(--primitives-spacing-8);
 }
 
+.page-anchor-link {
+  align-items: center;
+  background: var(--semantic-color-button-anchor-background-default);
+  border-radius: var(--semantic-button-radius);
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  padding: var(--semantic-button-padding-y)
+    var(--semantic-button-padding-x);
+  text-align: center;
+  white-space: nowrap;
+}
+
 .page-surface,
 .page-stat-card,
 .page-step-card {
@@ -380,7 +393,7 @@ textarea {
 }
 
 .page-footer__links {
-  color: var(--semantic-color-link-accent-default);
+  color: var(--semantic-color-link-neutral-default);
   display: flex;
   gap: var(--primitives-spacing-40);
   width: 100%;
