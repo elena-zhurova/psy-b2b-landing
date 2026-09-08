@@ -9,6 +9,14 @@ export type {
 } from './ButtonHideExpand';
 export { FAQCard } from './FAQCard';
 export type { FAQCardProps, FAQCardState } from './FAQCard';
+export { Input } from './Input';
+export type {
+  InputAvailability,
+  InputContent,
+  InputInteraction,
+  InputProps,
+  InputValidation,
+} from './Input';
 export { Link } from './Link';
 export type {
   LinkDestination,

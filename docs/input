@@ -1,0 +1,68 @@
+# Input
+
+> Component
+
+## Назначение
+
+`Input` — компонент поля ввода с подписью и вспомогательным или ошибочным сообщением.
+
+Компонент отвечает за визуальную структуру и состояния одного поля. Он не выполняет валидацию формы и не определяет момент, когда ошибка должна появиться снова.
+
+---
+
+## Зона ответственности
+
+`Input` отвечает за:
+
+- подпись поля;
+- контроль ввода;
+- placeholder или введённое значение;
+- helper message;
+- error message;
+- визуальные состояния Interaction, Content, Validation и Availability;
+- применение semantic field color и size tokens.
+
+---
+
+## Состояния
+
+`Input` использует четыре оси:
+
+- `Interaction`: `default`, `hover`, `focus`;
+- `Content`: `empty`, `filled`;
+- `Validation`: `default`, `error`;
+- `Availability`: `enabled`, `disabled`.
+
+Для `disabled` hover/focus состояния не используются.
+
+---
+
+## Error → Focus
+
+Если поле находится в состоянии `error`, но пользователь фокусируется на нём для исправления значения, компонент показывает обычное состояние `focus`.
+
+В этот момент error background, error border и error message скрываются. Ошибка может появиться снова только после следующего validation event на стороне потребителя.
+
+---
+
+## Typography
+
+`Input` использует существующие semantic typography roles:
+
+- label → `semantic/type/heading/tn`;
+- placeholder/value → `semantic/type/description/normal`;
+- helper/error message → `semantic/type/body/caption`.
+
+---
+
+## Tokens
+
+`Input` использует semantic tokens:
+
+- padding → `semantic/field/paddingX`, `semantic/field/paddingY`;
+- border width → `semantic/field/border/default`, `semantic/field/border/active`;
+- border color → `semantic/color/field/border/*`;
+- background → `semantic/color/field/background/*`;
+- label → `semantic/color/field/label/default`;
+- placeholder/value → `semantic/color/field/text/placeholder`, `semantic/color/field/text/value`;
+- message/error → `semantic/color/field/message/default`, `semantic/color/field/message/error`.

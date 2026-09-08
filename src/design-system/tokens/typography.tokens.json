@@ -406,6 +406,38 @@
             "$type": "letterSpacing",
             "$value": "{primitives.type.letterSpacing.normal}"
           }
+        },
+        "caption": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.regular}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.20}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.16}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.16}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.110}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
         }
       }
     }

@@ -65,6 +65,8 @@
   --semantic-card-padding-y-comfortable: var(--primitives-spacing-20);
   --semantic-card-gap-compact: var(--primitives-spacing-8);
   --semantic-card-gap-comfortable: var(--primitives-spacing-20);
+  --semantic-field-padding-x: var(--primitives-spacing-8);
+  --semantic-field-padding-y: var(--primitives-spacing-8);
   --semantic-field-border-default: 1px;
   --semantic-field-border-active: 2px;
   --semantic-spacing-section-outer-top-md: var(--primitives-spacing-32);
@@ -121,6 +123,10 @@
   --semantic-type-body-normal-font-weight: var(--primitives-type-weight-regular);
   --semantic-type-body-normal-line-height: var(--primitives-type-line-height-140);
   --semantic-type-body-normal-letter-spacing: var(--primitives-type-letter-spacing-normal);
+  --semantic-type-body-caption-font-family: var(--primitives-type-family-primary);
+  --semantic-type-body-caption-font-weight: var(--primitives-type-weight-regular);
+  --semantic-type-body-caption-line-height: var(--primitives-type-line-height-110);
+  --semantic-type-body-caption-letter-spacing: var(--primitives-type-letter-spacing-normal);
   --semantic-type-button-font-size: var(--primitives-type-size-16);
   --semantic-type-decor-number-font-size: var(--primitives-type-size-60);
   --semantic-type-decor-initial-font-size: var(--primitives-type-size-28);
@@ -132,6 +138,7 @@
   --semantic-type-description-normal-font-size: var(--primitives-type-size-20);
   --semantic-type-description-accent-font-size: var(--primitives-type-size-20);
   --semantic-type-body-normal-font-size: var(--primitives-type-size-16);
+  --semantic-type-body-caption-font-size: var(--primitives-type-size-16);
 }
 
 @media (min-width: 641px) {
@@ -154,6 +161,7 @@
     --semantic-type-description-normal-font-size: var(--primitives-type-size-20);
     --semantic-type-description-accent-font-size: var(--primitives-type-size-20);
     --semantic-type-body-normal-font-size: var(--primitives-type-size-16);
+    --semantic-type-body-caption-font-size: var(--primitives-type-size-16);
   }
 }
 
@@ -177,5 +185,6 @@
     --semantic-type-description-normal-font-size: var(--primitives-type-size-24);
     --semantic-type-description-accent-font-size: var(--primitives-type-size-24);
     --semantic-type-body-normal-font-size: var(--primitives-type-size-20);
+    --semantic-type-body-caption-font-size: var(--primitives-type-size-20);
   }
 }

@@ -82,6 +82,17 @@ const textRoles = [
     },
   },
   {
+    name: 'semantic/type/heading/tn',
+    sample: 'Компания',
+    style: {
+      fontFamily: 'var(--semantic-type-heading-tn-font-family)',
+      fontSize: 'var(--semantic-type-heading-tn-font-size)',
+      fontWeight: 'var(--semantic-type-heading-tn-font-weight)',
+      letterSpacing: 'var(--semantic-type-heading-tn-letter-spacing)',
+      lineHeight: 'var(--semantic-type-heading-tn-line-height)',
+    },
+  },
+  {
     name: 'semantic/type/description/normal',
     sample: 'Humanteq помогает человеку сделать первый шаг к разговору.',
     style: {
@@ -112,6 +123,17 @@ const textRoles = [
       fontWeight: 'var(--semantic-type-body-normal-font-weight)',
       letterSpacing: 'var(--semantic-type-body-normal-letter-spacing)',
       lineHeight: 'var(--semantic-type-body-normal-line-height)',
+    },
+  },
+  {
+    name: 'semantic/type/body/caption',
+    sample: 'Укажите имя и фамилию',
+    style: {
+      fontFamily: 'var(--semantic-type-body-caption-font-family)',
+      fontSize: 'var(--semantic-type-body-caption-font-size)',
+      fontWeight: 'var(--semantic-type-body-caption-font-weight)',
+      letterSpacing: 'var(--semantic-type-body-caption-letter-spacing)',
+      lineHeight: 'var(--semantic-type-body-caption-line-height)',
     },
   },
 ];

@@ -499,6 +499,38 @@
       }
     },
     "field": {
+      "paddingX": {
+        "$type": "number",
+        "$value": 8,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:425:4228",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:209948957d0997278232443a368639608505b091/-1:-1",
+            "targetVariableName": "primitives/spacing/8",
+            "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
+            "targetVariableSetName": "primitives"
+          }
+        }
+      },
+      "paddingY": {
+        "$type": "number",
+        "$value": 8,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:425:4229",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:209948957d0997278232443a368639608505b091/-1:-1",
+            "targetVariableName": "primitives/spacing/8",
+            "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
+            "targetVariableSetName": "primitives"
+          }
+        }
+      },
       "border": {
         "default": {
           "$type": "number",
