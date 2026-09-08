@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Bubble, Button, FAQItem, Link } from './design-system/components';
+import { Bubble, Button, FAQCard, Link } from './design-system/components';
 import { Container, Grid, SideBySide } from './design-system/layout';
 import { TemporaryHeader } from './components/TemporaryHeader';
 import chartColleagues from './assets/figma-page/chart-colleagues.svg';
@@ -393,7 +393,7 @@ export function App() {
                 role="button"
                 tabIndex={0}
               >
-                <FAQItem
+                <FAQCard
                   answer={item.answer}
                   question={item.question}
                   state={openFaqIndex === index ? 'active' : 'default'}

@@ -241,6 +241,38 @@
             "$type": "letterSpacing",
             "$value": "{primitives.type.letterSpacing.normal}"
           }
+        },
+        "md": {
+          "fontFamily": {
+            "$type": "fontFamily",
+            "$value": "{primitives.type.family.primary}"
+          },
+          "fontWeight": {
+            "$type": "fontWeight",
+            "$value": "{primitives.type.weight.medium}"
+          },
+          "fontSize": {
+            "wide": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.32}"
+            },
+            "medium": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.28}"
+            },
+            "narrow": {
+              "$type": "fontSize",
+              "$value": "{primitives.type.size.28}"
+            }
+          },
+          "lineHeight": {
+            "$type": "lineHeight",
+            "$value": "{primitives.type.lineHeight.110}"
+          },
+          "letterSpacing": {
+            "$type": "letterSpacing",
+            "$value": "{primitives.type.letterSpacing.normal}"
+          }
         }
       },
       "description": {

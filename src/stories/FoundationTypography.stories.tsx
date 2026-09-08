@@ -1,12 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const typeSizes = [
+  { name: '--primitives-type-size-16', value: '16px' },
   { name: '--primitives-type-size-20', value: '20px' },
   { name: '--primitives-type-size-24', value: '24px' },
   { name: '--primitives-type-size-28', value: '28px' },
   { name: '--primitives-type-size-32', value: '32px' },
   { name: '--primitives-type-size-40', value: '40px' },
+  { name: '--primitives-type-size-44', value: '44px' },
   { name: '--primitives-type-size-48', value: '48px' },
+  { name: '--primitives-type-size-60', value: '60px' },
   { name: '--primitives-type-size-64', value: '64px' },
 ];
 

@@ -155,9 +155,9 @@ Card — компактный повторяемый контентный бло
 внутри Surface, Grid или Carousel.
 
 Примеры:
-- FAQItem;
+- FAQCard;
 - SpecialistCard;
-- StatisticCard;
+- StatCard;
 - StoryCard.
 
 Общие свойства карточек используют `semantic/card/*`

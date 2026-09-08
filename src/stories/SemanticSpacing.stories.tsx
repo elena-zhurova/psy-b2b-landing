@@ -13,14 +13,18 @@ const semanticSpacingTokens = [
   { name: '--semantic-surface-padding-x-comfortable', value: '80px', alias: 'primitives/spacing/80' },
   { name: '--semantic-surface-padding-y-compact', value: '40px', alias: 'primitives/spacing/40' },
   { name: '--semantic-surface-padding-y-comfortable', value: '80px', alias: 'primitives/spacing/80' },
+  { name: '--semantic-surface-gap-none', value: '0px', alias: 'primitives/spacing/0' },
   { name: '--semantic-surface-gap-compact', value: '40px', alias: 'primitives/spacing/40' },
   { name: '--semantic-surface-gap-comfortable', value: '80px', alias: 'primitives/spacing/80' },
   { name: '--semantic-card-padding-x-compact', value: '8px', alias: 'primitives/spacing/8' },
   { name: '--semantic-card-padding-x-comfortable', value: '20px', alias: 'primitives/spacing/20' },
+  { name: '--semantic-card-padding-x-relaxed', value: '32 / 32 / 40px', alias: 'responsive semantic spacing' },
   { name: '--semantic-card-padding-y-compact', value: '8px', alias: 'primitives/spacing/8' },
   { name: '--semantic-card-padding-y-comfortable', value: '20px', alias: 'primitives/spacing/20' },
-  { name: '--semantic-card-gap-compact', value: '20px', alias: 'primitives/spacing/20' },
-  { name: '--semantic-card-gap-comfortable', value: '40px', alias: 'primitives/spacing/40' },
+  { name: '--semantic-card-padding-y-relaxed', value: '32 / 32 / 40px', alias: 'responsive semantic spacing' },
+  { name: '--semantic-card-gap-compact', value: '8px', alias: 'primitives/spacing/8' },
+  { name: '--semantic-card-gap-comfortable', value: '20px', alias: 'primitives/spacing/20' },
+  { name: '--semantic-card-gap-relaxed', value: '32 / 32 / 40px', alias: 'responsive semantic spacing' },
 ];
 
 const SemanticSpacing = () => (

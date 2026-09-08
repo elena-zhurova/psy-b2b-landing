@@ -33,7 +33,7 @@ textarea {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: var(--primitives-spacing-40);
+  gap: var(--semantic-surface-gap-none);
   min-width: 0;
 }
 
@@ -145,11 +145,11 @@ textarea {
 .page-stat-card {
   display: flex;
   flex-direction: column;
-  gap: var(--primitives-spacing-20);
+  gap: var(--semantic-card-gap-comfortable);
   justify-content: space-between;
   min-width: 0;
   overflow: hidden;
-  padding: var(--semantic-surface-padding-y-compact)
+  padding: var(--semantic-card-padding-y-comfortable)
     var(--semantic-card-padding-x-comfortable);
 }
 
@@ -279,6 +279,14 @@ textarea {
   gap: var(--primitives-spacing-40);
 }
 
+.page-safety-card .page-card-heading h3 {
+  font-family: var(--semantic-type-heading-md-font-family);
+  font-size: var(--semantic-type-heading-md-font-size);
+  font-weight: var(--semantic-type-heading-md-font-weight);
+  letter-spacing: var(--semantic-type-heading-md-letter-spacing);
+  line-height: var(--semantic-type-heading-md-line-height);
+}
+
 .page-card-heading > img,
 .page-company-asset {
   flex: 0 0 auto;
@@ -313,7 +321,7 @@ textarea {
 .page-step-card {
   align-items: center;
   display: flex;
-  gap: var(--primitives-spacing-20);
+  gap: var(--semantic-card-gap-comfortable);
   overflow: hidden;
   padding: var(--semantic-card-padding-y-comfortable)
     var(--semantic-card-padding-x-comfortable);
@@ -339,7 +347,7 @@ textarea {
   cursor: pointer;
 }
 
-.page-faq-control .ds-faq-item {
+.page-faq-control .ds-faq-card {
   width: 100%;
 }
 
@@ -354,7 +362,7 @@ textarea {
 .page-footer__container {
   display: flex;
   flex-direction: column;
-  gap: var(--primitives-spacing-0);
+  gap: var(--semantic-surface-gap-none);
   padding-block: var(--primitives-spacing-40);
 }
 

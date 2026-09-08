@@ -6,6 +6,7 @@ const spacingTokens = [
   { name: '--primitives-spacing-20', value: '20px' },
   { name: '--primitives-spacing-40', value: '40px' },
   { name: '--primitives-spacing-52', value: '52px' },
+  { name: '--primitives-spacing-60', value: '60px' },
   { name: '--primitives-spacing-80', value: '80px' },
 ];
 

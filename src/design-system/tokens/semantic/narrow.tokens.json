@@ -734,125 +734,123 @@
               "targetVariableSetName": "primitives"
             }
           }
+        },
+        "none": {
+          "$type": "number",
+          "$value": "{primitives.spacing.0}",
+          "$extensions": {
+            "com.figma.variableId": "VariableID:374:1750",
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ]
+          }
         }
       }
     },
     "card": {
       "radius": {
         "$type": "number",
-        "$value": 20,
+        "$value": "{primitives.radius.20}",
         "$extensions": {
           "com.figma.variableId": "VariableID:200:833",
           "com.figma.scopes": [
             "ALL_SCOPES"
-          ],
-          "com.figma.aliasData": {
-            "targetVariableId": "VariableID:856608285fdb6ddeff25459484be7a84973dddea/-1:-1",
-            "targetVariableName": "primitives/radius/20",
-            "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-            "targetVariableSetName": "primitives"
-          }
+          ]
         }
       },
       "paddingX": {
         "compact": {
           "$type": "number",
-          "$value": 8,
+          "$value": "{primitives.spacing.8}",
           "$extensions": {
             "com.figma.variableId": "VariableID:200:840",
             "com.figma.scopes": [
               "ALL_SCOPES"
-            ],
-            "com.figma.aliasData": {
-              "targetVariableId": "VariableID:209948957d0997278232443a368639608505b091/-1:-1",
-              "targetVariableName": "primitives/spacing/8",
-              "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-              "targetVariableSetName": "primitives"
-            }
+            ]
           }
         },
         "comfortable": {
           "$type": "number",
-          "$value": 20,
+          "$value": "{primitives.spacing.20}",
           "$extensions": {
             "com.figma.variableId": "VariableID:200:841",
             "com.figma.scopes": [
               "ALL_SCOPES"
-            ],
-            "com.figma.aliasData": {
-              "targetVariableId": "VariableID:906c7a6a68c511042dc7fb91c627537498d5d599/-1:-1",
-              "targetVariableName": "primitives/spacing/20",
-              "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-              "targetVariableSetName": "primitives"
-            }
+            ]
+          }
+        },
+        "relaxed": {
+          "$type": "number",
+          "$value": "{primitives.spacing.32}",
+          "$extensions": {
+            "com.figma.variableId": "VariableID:371:1717",
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ]
           }
         }
       },
       "paddingY": {
         "compact": {
           "$type": "number",
-          "$value": 8,
+          "$value": "{primitives.spacing.8}",
           "$extensions": {
             "com.figma.variableId": "VariableID:200:842",
             "com.figma.scopes": [
               "ALL_SCOPES"
-            ],
-            "com.figma.aliasData": {
-              "targetVariableId": "VariableID:209948957d0997278232443a368639608505b091/-1:-1",
-              "targetVariableName": "primitives/spacing/8",
-              "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-              "targetVariableSetName": "primitives"
-            }
+            ]
           }
         },
         "comfortable": {
           "$type": "number",
-          "$value": 20,
+          "$value": "{primitives.spacing.20}",
           "$extensions": {
             "com.figma.variableId": "VariableID:200:843",
             "com.figma.scopes": [
               "ALL_SCOPES"
-            ],
-            "com.figma.aliasData": {
-              "targetVariableId": "VariableID:906c7a6a68c511042dc7fb91c627537498d5d599/-1:-1",
-              "targetVariableName": "primitives/spacing/20",
-              "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-              "targetVariableSetName": "primitives"
-            }
+            ]
+          }
+        },
+        "relaxed": {
+          "$type": "number",
+          "$value": "{primitives.spacing.32}",
+          "$extensions": {
+            "com.figma.variableId": "VariableID:371:1718",
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ]
           }
         }
       },
       "gap": {
         "compact": {
           "$type": "number",
-          "$value": 20,
+          "$value": "{primitives.spacing.8}",
           "$extensions": {
             "com.figma.variableId": "VariableID:200:844",
             "com.figma.scopes": [
               "ALL_SCOPES"
-            ],
-            "com.figma.aliasData": {
-              "targetVariableId": "VariableID:906c7a6a68c511042dc7fb91c627537498d5d599/-1:-1",
-              "targetVariableName": "primitives/spacing/20",
-              "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-              "targetVariableSetName": "primitives"
-            }
+            ]
           }
         },
         "comfortable": {
           "$type": "number",
-          "$value": 40,
+          "$value": "{primitives.spacing.20}",
           "$extensions": {
             "com.figma.variableId": "VariableID:200:845",
             "com.figma.scopes": [
               "ALL_SCOPES"
-            ],
-            "com.figma.aliasData": {
-              "targetVariableId": "VariableID:87fb7bf453c47c151587b65ff6379e63e70d7c12/-1:-1",
-              "targetVariableName": "primitives/spacing/40",
-              "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
-              "targetVariableSetName": "primitives"
-            }
+            ]
+          }
+        },
+        "relaxed": {
+          "$type": "number",
+          "$value": "{primitives.spacing.32}",
+          "$extensions": {
+            "com.figma.variableId": "VariableID:371:1719",
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ]
           }
         }
       }

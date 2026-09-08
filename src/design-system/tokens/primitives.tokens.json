@@ -489,6 +489,16 @@
           ]
         }
       },
+      "60": {
+        "$type": "number",
+        "$value": 60,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:373:1749",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      },
       "80": {
         "$type": "number",
         "$value": 80,

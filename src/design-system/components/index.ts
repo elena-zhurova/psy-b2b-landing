@@ -7,8 +7,8 @@ export type {
   ButtonHideExpandProps,
   ButtonHideExpandRole,
 } from './ButtonHideExpand';
-export { FAQItem } from './FAQItem';
-export type { FAQItemProps, FAQItemState } from './FAQItem';
+export { FAQCard } from './FAQCard';
+export type { FAQCardProps, FAQCardState } from './FAQCard';
 export { Link } from './Link';
 export type {
   LinkDestination,

@@ -60,6 +60,17 @@ const textRoles = [
     },
   },
   {
+    name: 'semantic/type/heading/md',
+    sample: 'Сотрудник',
+    style: {
+      fontFamily: 'var(--semantic-type-heading-md-font-family)',
+      fontSize: 'var(--semantic-type-heading-md-font-size)',
+      fontWeight: 'var(--semantic-type-heading-md-font-weight)',
+      letterSpacing: 'var(--semantic-type-heading-md-letter-spacing)',
+      lineHeight: 'var(--semantic-type-heading-md-line-height)',
+    },
+  },
+  {
     name: 'semantic/type/heading/sm',
     sample: 'Какие методики используются?',
     style: {
