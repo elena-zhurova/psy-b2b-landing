@@ -64,5 +64,5 @@
 - border color → `semantic/color/field/border/*`;
 - background → `semantic/color/field/background/*`;
 - label → `semantic/color/field/label/default`;
-- placeholder/value → `semantic/color/field/text/placeholder`, `semantic/color/field/text/value`;
+- placeholder/value → `semantic/color/field/text/placeholder/*`, `semantic/color/field/text/value`;
 - message/error → `semantic/color/field/message/default`, `semantic/color/field/message/error`.

@@ -15,6 +15,7 @@
   width: 885px;
 }
 
+.ds-faq-card:hover,
 .ds-faq-card--hover,
 .ds-faq-card--active {
   background: var(--semantic-color-card-background-accent);

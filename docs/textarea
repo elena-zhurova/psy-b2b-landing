@@ -1,0 +1,55 @@
+# Textarea
+
+> Component
+
+## Назначение
+
+`Textarea` — многострочное поле ввода с подписью и вспомогательным сообщением.
+
+Компонент отвечает за визуальную структуру и состояния одного многострочного поля. Он не выполняет валидацию формы.
+
+---
+
+## Зона ответственности
+
+`Textarea` отвечает за:
+
+- подпись поля;
+- многострочный control;
+- placeholder или введённое значение;
+- helper message;
+- visual interaction states;
+- применение semantic field color и size tokens.
+
+---
+
+## Состояния
+
+`Textarea` использует две оси:
+
+- `Interaction`: `default`, `hover`, `focus`;
+- `Content`: `empty`, `filled`.
+
+---
+
+## Typography
+
+`Textarea` использует semantic typography roles:
+
+- label → `semantic/type/heading/tn`;
+- placeholder/value → `semantic/type/description/normal`;
+- helper message → `semantic/type/body/caption`.
+
+---
+
+## Tokens
+
+`Textarea` использует:
+
+- padding → `semantic/field/paddingX`, `semantic/field/paddingY`;
+- border width → `semantic/field/border/default`, `semantic/field/border/active`;
+- border color → `semantic/color/field/border/*`;
+- background → `semantic/color/field/background/*`;
+- label → `semantic/color/field/label/default`;
+- placeholder/value → `semantic/color/field/text/placeholder/*`, `semantic/color/field/text/value`;
+- message → `semantic/color/field/message/default`.

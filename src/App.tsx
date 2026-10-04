@@ -1,8 +1,18 @@
 import { useState } from 'react';
 
-import { Bubble, Button, FAQCard, Link } from './design-system/components';
+import {
+  Bubble,
+  Button,
+  Dropdown,
+  FAQCard,
+  Input,
+  Link,
+  MediaSquareSmall,
+  SpecialistCard,
+  Textarea,
+} from './design-system/components';
 import { Container, Grid, SideBySide } from './design-system/layout';
-import { TemporaryHeader } from './components/TemporaryHeader';
+import { Header } from './components/Header';
 import chartColleagues from './assets/figma-page/chart-colleagues.svg';
 import chartManagement from './assets/figma-page/chart-management.svg';
 import companyBase from './assets/figma-page/company-base.svg';
@@ -18,6 +28,7 @@ import footerLine from './assets/figma-page/footer-line.svg';
 import heroComponent from './assets/figma-page/hero-component-5.svg';
 import listMarker from './assets/figma-page/list-marker.svg';
 import psyInformationLotti from './assets/figma-page/psy-lotti.svg';
+import specialistPhoto from './assets/specialists/natalia-vladykina.png';
 import validationLotti from './assets/figma-page/validation-lotti.svg';
 import './App.css';
 
@@ -69,6 +80,20 @@ const steps = [
   'Даём доступ, договариваемся о формате',
   'Смотрим использование и результат',
   'Решаем о масштабировании',
+];
+
+const specialists = Array.from({ length: 4 }, (_, index) => ({
+  bio: 'Психолог, кандидат психологических наук, когнитивно-поведенческий терапевт, преподаватель. Автор более 50 научных и научно-популярных публикаций.',
+  imageSrc: specialistPhoto,
+  name: ['Владыкина', 'Наталья Петровна'],
+  id: `natalia-vladykina-${index}`,
+}));
+
+const teamSizeOptions = [
+  { label: 'До 50 человек', value: 'up-to-50' },
+  { label: '50 – 200', value: '50-200' },
+  { label: '200 – 1000', value: '200-1000' },
+  { label: '1000 +', value: '1000-plus' },
 ];
 
 const faqItems = [
@@ -159,14 +184,6 @@ function SectionHeading({
   );
 }
 
-function MediaSquareSmall({ src }: { src: string }) {
-  return (
-    <div className="page-media-square">
-      <img alt="" src={src} />
-    </div>
-  );
-}
-
 function FooterGraphic() {
   return (
     <div className="page-footer-graphic" aria-hidden="true">
@@ -189,7 +206,7 @@ export function App() {
 
   return (
     <main className="page">
-      <TemporaryHeader />
+      <Header />
 
       <section className="page-section page-hero" id="hero">
         <Container>
@@ -201,7 +218,7 @@ export function App() {
               />
               <div className="page-button-row">
                 <Button>Обсудить запуск</Button>
-                <Link className="page-anchor-link" destination="anchor" href="#solution" presentation="accent">Что такое Humanteq</Link>
+                <Button href="#solution" variant="secondary">Что такое Humanteq</Button>
               </div>
             </div>
             <div className="page-surface page-surface--accent page-hero-card">
@@ -240,7 +257,7 @@ export function App() {
       <section className="page-section page-section--medium" id="psy-information">
         <Container>
           <div className="page-media-text">
-            <MediaSquareSmall src={psyInformationLotti} />
+            <MediaSquareSmall imageSrc={psyInformationLotti} />
             <div>
               <h2>Психологическое состояние — не только личный вопрос сотрудника.</h2>
               <p>Нагрузка и неопределённость снижают концентрацию, качество решений и способность восстанавливаться — а значит, становятся одним из факторов работоспособности команды.</p>
@@ -301,9 +318,25 @@ export function App() {
             <article className="page-surface page-surface--accent page-solution-card">
               <img alt="" src={solutionComponent} />
               <h3>Специализированный психологический ИИ, а не универсальный чат.</h3>
-              <Link className="page-anchor-link" destination="anchor" href="#faq-chatgpt" presentation="accent">Чем мы отличаемся от ChatGPT</Link>
+              <Button href="#faq-chatgpt" variant="secondary">Чем мы отличаемся от ChatGPT</Button>
             </article>
           </SideBySide>
+        </Container>
+      </section>
+
+      <section className="page-section" id="specialists">
+        <Container>
+          <SectionHeading title="Методология разработана практикующими психологами" />
+          <div className="page-specialists-list">
+            {specialists.map((specialist) => (
+              <SpecialistCard
+                bio={specialist.bio}
+                imageSrc={specialist.imageSrc}
+                key={specialist.id}
+                name={specialist.name}
+              />
+            ))}
+          </div>
         </Container>
       </section>
 
@@ -343,7 +376,7 @@ export function App() {
       <section className="page-section page-section--medium" id="validation">
         <Container>
           <div className="page-media-text">
-            <MediaSquareSmall src={validationLotti} />
+            <MediaSquareSmall imageSrc={validationLotti} />
             <div>
               <h2>Категория уже валидирована в мире:</h2>
               <p>Wysa (1 млрд+ AI-разговоров, 105 стран) и Unmind (+30,7% уверенности руководителей, RCT).</p>
@@ -400,6 +433,47 @@ export function App() {
                 />
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="page-section" id="form">
+        <Container>
+          <div className="page-form-section">
+            <div className="page-region">
+              <SectionHeading
+                description="Расскажите немного о компании – вернёмся с конкретными следующими шагами."
+                title="Обсудим запуск для вашей команды"
+              />
+              <div className="page-form-email">
+                <p>Или напишите напрямую</p>
+                <Link href="mailto:letsconnect@humanteq.io">letsconnect@humanteq.io</Link>
+              </div>
+            </div>
+            <form className="page-form-card">
+              <div className="page-form-row">
+                <Input label="Компания" message={false} placeholder="Название компании" />
+                <Input label="Имя и должность" message={false} placeholder="Иван Иванов, HRD" />
+              </div>
+              <div className="page-form-row">
+                <Input label="Email или телефон" message={false} placeholder="you@company.ru" />
+                <Dropdown
+                  label="Размер команды"
+                  message={false}
+                  options={teamSizeOptions}
+                  value="up-to-50"
+                />
+              </div>
+              <Textarea
+                label="Сообщение"
+                message={false}
+                placeholder="Коротко о задаче (не обязательно)."
+              />
+              <div className="page-form-action">
+                <Button>Обсудить запуск для команды</Button>
+                <p>Отвечаем в течение одного рабочего дня.</p>
+              </div>
+            </form>
           </div>
         </Container>
       </section>

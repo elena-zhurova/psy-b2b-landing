@@ -1,6 +1,6 @@
 import './FAQCard.css';
 
-import { ButtonHideExpand } from '../ButtonHideExpand';
+import { Button } from '../Button';
 
 export type FAQCardState = 'default' | 'hover' | 'active';
 
@@ -26,9 +26,10 @@ export function FAQCard({
     <article className={classNames}>
       <div className="ds-faq-card__content">
         <h3 className="ds-faq-card__question">{question}</h3>
-        <ButtonHideExpand
+        <Button
           aria-label={isActive ? 'Скрыть ответ' : 'Показать ответ'}
-          role={isActive ? 'to-hide' : 'to-expand'}
+          icon={isActive ? 'to-close' : 'plus'}
+          variant="utility-icon"
         />
       </div>
       {isActive && answer ? (

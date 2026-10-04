@@ -1,20 +1,20 @@
-.ds-input {
+.ds-dropdown {
   display: flex;
   flex-direction: column;
   gap: var(--primitives-spacing-8);
-  max-width: 723px;
+  position: relative;
   width: 100%;
 }
 
-.ds-input__label,
-.ds-input__message {
+.ds-dropdown__label,
+.ds-dropdown__message {
   box-sizing: border-box;
   display: block;
   padding-inline: var(--semantic-field-padding-x);
   width: 100%;
 }
 
-.ds-input__label {
+.ds-dropdown__label {
   color: var(--semantic-color-field-label-default);
   font-family: var(--semantic-type-heading-tn-font-family);
   font-size: var(--semantic-type-heading-tn-font-size);
@@ -26,23 +26,32 @@
   white-space: nowrap;
 }
 
-.ds-input__control {
+.ds-dropdown__field {
+  position: relative;
+  width: 100%;
+}
+
+.ds-dropdown__control {
   align-items: center;
+  appearance: none;
   background: var(--semantic-color-field-background-default);
   border: var(--semantic-field-border-default) solid
     var(--semantic-color-field-border-default);
   border-radius: var(--primitives-radius-8);
   box-sizing: border-box;
+  cursor: pointer;
   display: flex;
+  gap: var(--primitives-spacing-8);
+  height: 50px;
   justify-content: center;
   padding: var(--semantic-field-padding-y) var(--semantic-field-padding-x);
+  position: relative;
   width: 100%;
+  z-index: 2;
 }
 
-.ds-input__field {
-  appearance: none;
-  background: transparent;
-  border: 0;
+.ds-dropdown__value,
+.ds-dropdown__option {
   color: var(--semantic-color-field-text-value);
   flex: 1 1 0;
   font-family: var(--semantic-type-description-normal-font-family);
@@ -51,22 +60,20 @@
   letter-spacing: var(--semantic-type-description-normal-letter-spacing);
   line-height: var(--semantic-type-description-normal-line-height);
   min-width: 0;
-  outline: 0;
-  padding: 0;
+  overflow: hidden;
+  text-align: left;
   text-overflow: ellipsis;
-  width: 100%;
+  white-space: nowrap;
 }
 
-.ds-input__field::placeholder {
-  color: var(--semantic-color-field-text-placeholder-default);
-  opacity: 1;
+.ds-dropdown__icon {
+  display: block;
+  flex: 0 0 auto;
+  height: 20px;
+  width: 20px;
 }
 
-.ds-input__field:disabled {
-  cursor: default;
-}
-
-.ds-input__message {
+.ds-dropdown__message {
   color: var(--semantic-color-field-message-default);
   font-family: var(--semantic-type-body-caption-font-family);
   font-size: var(--semantic-type-body-caption-font-size);
@@ -75,49 +82,58 @@
   line-height: var(--semantic-type-body-caption-line-height);
 }
 
-.ds-input__message--error {
-  color: var(--semantic-color-field-message-error);
-}
-
-.ds-input:not(.ds-input--disabled):hover .ds-input__control,
-.ds-input--hover .ds-input__control {
+.ds-dropdown:hover .ds-dropdown__control,
+.ds-dropdown--hover .ds-dropdown__control {
   border-color: var(--semantic-color-field-border-hover);
   box-shadow: inset 0 0 0 var(--semantic-field-border-active)
     var(--semantic-color-field-border-hover);
 }
 
-.ds-input:not(.ds-input--disabled):hover .ds-input__field::placeholder,
-.ds-input--hover .ds-input__field::placeholder {
+.ds-dropdown--open .ds-dropdown__control {
+  box-shadow: inset 0 0 0 var(--semantic-field-border-active)
+    var(--semantic-color-field-border-hover);
   color: var(--semantic-color-field-text-placeholder-hover);
 }
 
-.ds-input--focus .ds-input__control,
-.ds-input:focus-within .ds-input__control {
+.ds-dropdown--open .ds-dropdown__value {
+  color: var(--semantic-color-field-text-placeholder-hover);
+}
+
+.ds-dropdown__menu {
   background: var(--semantic-color-field-background-focus);
-  border-color: var(--semantic-color-field-border-focus);
-  box-shadow: none;
+  border: var(--semantic-field-border-default) solid
+    var(--semantic-color-field-border-default);
+  border-radius: var(--primitives-radius-8);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 0;
+  padding: var(--semantic-field-padding-y) var(--semantic-field-padding-x);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
 
-.ds-input--error .ds-input__control {
-  background: var(--semantic-color-field-background-error);
-  border-color: var(--semantic-color-field-border-error);
-  box-shadow: none;
+.ds-dropdown__option {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 0;
+  width: 100%;
 }
 
-.ds-input--error:not(.ds-input--disabled):hover .ds-input__control,
-.ds-input--error.ds-input--hover .ds-input__control {
-  background: var(--semantic-color-field-background-default);
-  border-color: var(--semantic-color-field-border-error);
-  box-shadow: inset 0 0 0 var(--semantic-field-border-active)
-    var(--semantic-color-field-border-error);
+.ds-dropdown__option:hover {
+  color: var(--semantic-color-link-neutral-hover);
 }
 
-.ds-input--disabled .ds-input__control {
-  background: var(--semantic-color-field-background-disabled);
-  border-color: var(--semantic-color-field-border-disabled);
-  box-shadow: none;
-}
-
-.ds-input--disabled.ds-input--error .ds-input__control {
-  background: var(--semantic-color-field-background-error);
+.ds-dropdown__option--selected {
+  font-family: var(--semantic-type-description-accent-font-family);
+  font-weight: var(--semantic-type-description-accent-font-weight);
 }

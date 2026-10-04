@@ -1,1 +1,0 @@
-export { TemporaryHeader } from './TemporaryHeader';

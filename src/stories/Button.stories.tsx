@@ -22,10 +22,59 @@ export const Primary: Story = {
   },
 };
 
+export const Secondary: Story = {
+  args: {
+    children: 'Сделать первый шаг',
+    href: '#start',
+    variant: 'secondary',
+  },
+};
+
+export const SecondaryHover: Story = {
+  args: {
+    children: 'Сделать первый шаг',
+    href: '#start',
+    state: 'hover',
+    variant: 'secondary',
+  },
+};
+
+export const UtilityIconDefault: Story = {
+  name: 'Utility Icon Default',
+  args: {
+    'aria-label': 'Показать',
+    icon: 'plus',
+    variant: 'utility-icon',
+  },
+};
+
+export const UtilityIconHover: Story = {
+  name: 'Utility Icon Hover',
+  args: {
+    'aria-label': 'Показать',
+    icon: 'plus',
+    state: 'hover',
+    variant: 'utility-icon',
+  },
+};
+
 export const All: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+    <div style={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
       <Button variant="primary">Сделать первый шаг</Button>
+      <Button href="#start" variant="secondary">Сделать первый шаг</Button>
+      <Button aria-label="Показать" variant="utility-icon" />
+      <Button aria-label="Показать" state="hover" variant="utility-icon" />
+    </div>
+  ),
+};
+
+export const UtilityIconWithDifferentIcons: Story = {
+  name: 'Utility Icon Content Examples',
+  render: () => (
+    <div style={{ alignItems: 'center', display: 'flex', gap: '20px' }}>
+      <Button aria-label="Показать" icon="plus" variant="utility-icon" />
+      <Button aria-label="Скрыть" icon="to-close" variant="utility-icon" />
     </div>
   ),
 };

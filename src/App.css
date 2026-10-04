@@ -73,19 +73,6 @@ textarea {
   gap: var(--primitives-spacing-8);
 }
 
-.page-anchor-link {
-  align-items: center;
-  background: var(--semantic-color-button-anchor-background-default);
-  border-radius: var(--semantic-button-radius);
-  box-sizing: border-box;
-  display: inline-flex;
-  justify-content: center;
-  padding: var(--semantic-button-padding-y)
-    var(--semantic-button-padding-x);
-  text-align: center;
-  white-space: nowrap;
-}
-
 .page-surface,
 .page-stat-card,
 .page-step-card {
@@ -203,23 +190,6 @@ textarea {
   margin: 0;
 }
 
-.page-media-square {
-  align-items: center;
-  background: var(--semantic-color-card-background-accent);
-  border-radius: var(--semantic-surface-radius);
-  box-sizing: border-box;
-  display: flex;
-  height: 240px;
-  justify-content: center;
-  padding: var(--primitives-spacing-20);
-  width: 240px;
-}
-
-.page-media-square img {
-  height: 148px;
-  width: 148px;
-}
-
 .page-marker-list {
   display: flex;
   flex-direction: column;
@@ -275,6 +245,14 @@ textarea {
   height: 134px;
   object-fit: contain;
   width: 134px;
+}
+
+.page-specialists-list {
+  display: grid;
+  gap: var(--primitives-spacing-20);
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  overflow-x: auto;
+  padding-bottom: var(--primitives-spacing-8);
 }
 
 .page-card-heading {
@@ -353,6 +331,71 @@ textarea {
 
 .page-faq-control .ds-faq-card {
   width: 100%;
+}
+
+.page-form-section {
+  display: grid;
+  gap: var(--primitives-spacing-80);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-form-email {
+  display: flex;
+  flex-direction: column;
+  gap: var(--semantic-surface-gap-none);
+}
+
+.page-form-email p {
+  font-family: var(--semantic-type-description-normal-font-family);
+  font-size: var(--semantic-type-description-normal-font-size);
+  font-weight: var(--semantic-type-description-normal-font-weight);
+  letter-spacing: var(--semantic-type-description-normal-letter-spacing);
+  line-height: var(--semantic-type-description-normal-line-height);
+  margin: 0;
+}
+
+.page-form-card {
+  background: var(--semantic-color-card-background-accent);
+  border: 0;
+  border-radius: var(--semantic-surface-radius);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--semantic-surface-gap-compact);
+  margin: 0;
+  min-width: 0;
+  padding: var(--semantic-surface-padding-y-compact)
+    var(--semantic-surface-padding-x-compact);
+}
+
+.page-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--semantic-surface-gap-compact);
+  width: 100%;
+}
+
+.page-form-row > * {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.page-form-action {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--primitives-spacing-20);
+}
+
+.page-form-action p {
+  flex: 1 1 300px;
+  font-family: var(--semantic-type-body-normal-font-family);
+  font-size: var(--semantic-type-body-normal-font-size);
+  font-weight: var(--semantic-type-body-normal-font-weight);
+  letter-spacing: var(--semantic-type-body-normal-letter-spacing);
+  line-height: var(--semantic-type-body-normal-line-height);
+  margin: 0;
+  min-width: 0;
 }
 
 .page-footer {
@@ -470,6 +513,15 @@ textarea {
   .page-media-text {
     gap: var(--primitives-spacing-40);
   }
+
+  .page-specialists-list {
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+  }
+
+  .page-form-section {
+    gap: var(--primitives-spacing-40);
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -489,19 +541,19 @@ textarea {
     padding-right: 0;
   }
 
-  .page-media-square {
-    height: 120px;
-    width: 120px;
-  }
-
-  .page-media-square img {
-    height: 74px;
-    width: 74px;
-  }
-
   .page-chart-row,
   .page-card-heading {
     flex-direction: column;
+  }
+
+  .page-specialists-list {
+    margin-inline: calc(-1 * var(--primitives-spacing-20));
+    padding-inline: var(--primitives-spacing-20);
+  }
+
+  .page-form-card {
+    padding: var(--semantic-card-padding-y-comfortable)
+      var(--semantic-card-padding-x-comfortable);
   }
 
   .page-footer__links {

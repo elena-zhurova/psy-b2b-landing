@@ -1,0 +1,69 @@
+# Dropdown
+
+> Component
+
+## Назначение
+
+`Dropdown` — поле выбора значения из списка.
+
+Компонент отвечает за визуальное представление поля выбора и его inspectable states. Он не определяет бизнес-логику формы.
+
+---
+
+## Зона ответственности
+
+`Dropdown` отвечает за:
+
+- label;
+- выбранное значение;
+- control с иконкой раскрытия;
+- список options в состоянии `open`;
+- helper message;
+- visual interaction states;
+- применение semantic field tokens.
+
+---
+
+## Состояния
+
+`Dropdown` использует ось:
+
+- `Interaction`: `default`, `hover`, `open`.
+
+---
+
+## Typography
+
+`Dropdown` использует semantic typography roles:
+
+- label → `semantic/type/heading/tn`;
+- selected value/options → `semantic/type/description/normal`;
+- selected option emphasis → `semantic/type/description/accent`;
+- helper message → `semantic/type/body/caption`.
+
+---
+
+## Tokens
+
+`Dropdown` использует:
+
+- padding → `semantic/field/paddingX`, `semantic/field/paddingY`;
+- border width → `semantic/field/border/default`, `semantic/field/border/active`;
+- border color → `semantic/color/field/border/*`;
+- background → `semantic/color/field/background/*`;
+- label → `semantic/color/field/label/default`;
+- selected value → `semantic/color/field/text/value`;
+- hover/open text → existing semantic field/link color roles;
+- message → `semantic/color/field/message/default`.
+
+---
+
+## Не определено
+
+Этот компонент пока не определяет:
+
+- keyboard navigation по option list;
+- закрытие по клику снаружи;
+- form serialization.
+
+Эти правила должны быть добавлены отдельно, если появится продуктовая необходимость.

@@ -501,15 +501,15 @@
     "field": {
       "paddingX": {
         "$type": "number",
-        "$value": 8,
+        "$value": 20,
         "$extensions": {
           "com.figma.variableId": "VariableID:425:4228",
           "com.figma.scopes": [
             "ALL_SCOPES"
           ],
           "com.figma.aliasData": {
-            "targetVariableId": "VariableID:209948957d0997278232443a368639608505b091/-1:-1",
-            "targetVariableName": "primitives/spacing/8",
+            "targetVariableId": "VariableID:906c7a6a68c511042dc7fb91c627537498d5d599/-1:-1",
+            "targetVariableName": "primitives/spacing/20",
             "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
             "targetVariableSetName": "primitives"
           }
@@ -550,6 +550,24 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ]
+          }
+        }
+      }
+    },
+    "header": {
+      "paddingY": {
+        "$type": "number",
+        "$value": 20,
+        "$extensions": {
+          "com.figma.variableId": "VariableID:532:7331",
+          "com.figma.scopes": [
+            "ALL_SCOPES"
+          ],
+          "com.figma.aliasData": {
+            "targetVariableId": "VariableID:906c7a6a68c511042dc7fb91c627537498d5d599/-1:-1",
+            "targetVariableName": "primitives/spacing/20",
+            "targetVariableSetId": "VariableCollectionId:b79e142e98c555c9376761aca1aad5ff8d0d843b/-1:-1",
+            "targetVariableSetName": "primitives"
           }
         }
       }

@@ -1,0 +1,56 @@
+# SpecialistCard
+
+> Component
+
+## Назначение
+
+`SpecialistCard` отображает одну карточку специалиста.
+
+Компонент отвечает только за визуальную структуру одной карточки: фото, имя и описание.
+
+---
+
+## Зона ответственности
+
+`SpecialistCard` отвечает за:
+
+- изображение специалиста;
+- имя специалиста;
+- описание/биографию;
+- card background, radius, padding и gap через semantic card tokens;
+- типографику имени и описания.
+
+---
+
+## Вне зоны ответственности
+
+`SpecialistCard` не отвечает за:
+
+- количество карточек;
+- carousel или горизонтальную прокрутку;
+- layout секции;
+- порядок карточек;
+- загрузку данных.
+
+Эти решения принадлежат родительской секции или layout/interaction pattern.
+
+---
+
+## Typography
+
+`SpecialistCard` использует semantic typography roles:
+
+- name → `semantic/type/heading/tn`;
+- bio → `semantic/type/description/normal`.
+
+---
+
+## Tokens
+
+`SpecialistCard` использует:
+
+- background → `semantic/color/card/background/default`;
+- radius → `semantic/card/radius`;
+- content padding → `semantic/card/paddingX/relaxed`, `semantic/card/paddingY/relaxed`;
+- content gap → `semantic/card/gap/comfortable`;
+- text color → `semantic/color/text/primary`.

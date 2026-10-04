@@ -20,22 +20,27 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const AccentUnderlinedExternal: Story = {};
-
-export const AccentAnchor: Story = {
+export const Accent: Story = {
   args: {
-    destination: 'anchor',
-    href: '#form',
     presentation: 'accent',
   },
 };
 
-export const NeutralAnchor: Story = {
+export const AccentUnderlined: Story = {};
+
+export const Neutral: Story = {
   args: {
-    destination: 'anchor',
-    href: '#form',
     presentation: 'neutral',
   },
+};
+
+export const Destinations: Story = {
+  render: () => (
+    <div style={{ display: 'grid', gap: '20px', justifyItems: 'start' }}>
+      <Link destination="external" href="https://humanteq.io" presentation="accent-underlined">External destination</Link>
+      <Link destination="anchor" href="#form" presentation="accent-underlined">Anchor destination</Link>
+    </div>
+  ),
 };
 
 export const States: Story = {
