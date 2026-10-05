@@ -1,53 +1,0 @@
-Проанализировала, ничего не удаляла.
-Важный нюанс: git history почти пустая. В HEAD есть только README.md; весь текущий код, Storybook, токены и лендинг лежат как untracked. Поэтому точку “до начала design system” нельзя восстановить через обычный git diff. Классификацию ниже делаю по фактической структуре и по тому, что относится к новой DS.
-KEEP
-	•	src/design-system/tokens/* Новая Foundation/Semantic архитектура, JSON-токены, local tokens, CSS-токены, подключённые шрифты.
-	•	docs/design-system-spec.md
-	•	docs/figma-to-code.md
-	•	.storybook/main.ts
-	•	.storybook/preview.tsx Storybook нужен для DS, preview подключает tokens/index.css.
-	•	DS stories:
-	◦	src/stories/DesignSystem.mdx
-	◦	src/stories/Foundation*.stories.tsx
-	◦	src/stories/Semantic*.stories.tsx
-	◦	src/stories/Spacing.stories.tsx
-	•	public/fonts/* Нужны typography tokens / Storybook.
-	•	package.json, pnpm-lock.yaml, pnpm-workspace.yaml
-	•	tsconfig.json, tsconfig.node.json, vite.config.ts, vitest.shims.d.ts
-	•	index.html, src/main.tsx как инфраструктура Vite/React, но им нужны правки после удаления лендинга.
-DELETE – УДАЛЕНО ВСЕ
-	•	Старый landing:
-	◦	src/App.tsx
-	◦	src/components/Header.tsx
-	◦	src/components/Hero.tsx
-	◦	src/components/Sections.tsx
-	◦	src/data/content.ts
-	◦	src/styles.css
-	•	Старые Storybook starter examples:
-	◦	src/stories/Button.tsx
-	◦	src/stories/Button.stories.ts
-	◦	src/stories/button.css
-	◦	src/stories/Header.tsx
-	◦	src/stories/Header.stories.ts
-	◦	src/stories/header.css
-	◦	src/stories/Page.tsx
-	◦	src/stories/Page.stories.ts
-	◦	src/stories/page.css
-	◦	src/stories/Configure.mdx
-	◦	src/stories/assets/*
-	•	Generated/local мусор:
-	◦	dist/
-	◦	storybook-static/
-	◦	debug-storybook.log
-	◦	.DS_Store в корне и внутри папок
-	◦	tsconfig.tsbuildinfo
-	◦	tsconfig.node.tsbuildinfo
-	◦	vite.config.js
-	◦	vite.config.d.ts
-UNCERTAIN
-	•	README.md – переписано на момент 2 сент в соответствии с актуальным состоянием проекта Сейчас описывает старый лендинг. Удалять не обязательно, лучше заменить на README новой design system.
-	•	public/favicon.svg Может быть старым landing asset, но favicon всё равно нужен проекту. Лучше оставить или заменить позже.
-	•	lucide-react в package.json Сейчас используется только старым лендингом. После удаления src/components/* станет неиспользуемой зависимостью, но может понадобиться будущим DS-компонентам для иконок. Я бы пока не удаляла без решения.
-	•	node_modules/ Не source-файл. Можно удалить для чистоты, но это локальная папка зависимостей; проект после этого потребует pnpm install.
-	•	index.html Инфраструктура нужна, но meta/title сейчас про старый лендинг. Лучше не удалять, а привести к новой DS.
-	•	src/main.tsx Нужен как Vite entry, но сейчас импортирует старые App и styles.css. После удаления лендинга нужно заменить на минимальный app/placeholder или DS preview entry.
