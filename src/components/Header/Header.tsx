@@ -93,6 +93,7 @@ export function Header() {
           <Button
             className="site-header__cta"
             onClick={handleCtaClick}
+            href="#form"
           >
             Оставить заявку
           </Button>
@@ -118,6 +119,7 @@ export function Header() {
           <Button
             className="site-header__dropdown-cta"
             onClick={handleCtaClick}
+            href="#form"
           >
             Оставить заявку
           </Button>

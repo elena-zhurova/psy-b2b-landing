@@ -28,7 +28,10 @@ import footerLine from './assets/figma-page/footer-line.svg';
 import heroComponent from './assets/figma-page/hero-component-5.svg';
 import listMarker from './assets/figma-page/list-marker.svg';
 import psyInformationLotti from './assets/figma-page/psy-lotti.svg';
-import specialistPhoto from './assets/specialists/natalia-vladykina.png';
+import specialistPhotoVladykina from './assets/specialists/natalia-vladykina.png';
+import specialistPhotoKazantseva from './assets/specialists/tatiana-kazantseva.png';
+import specialistPhotoMararitsa from './assets/specialists/larisa-marararitsa.png';
+import specialistPhotoYakuhnova from './assets/specialists/anastasia-yakuhnova.png';
 import validationLotti from './assets/figma-page/validation-lotti.svg';
 import './App.css';
 
@@ -82,12 +85,32 @@ const steps = [
   'Решаем о масштабировании',
 ];
 
-const specialists = Array.from({ length: 4 }, (_, index) => ({
-  bio: 'Психолог, кандидат психологических наук, когнитивно-поведенческий терапевт, преподаватель. Автор более 50 научных и научно-популярных публикаций.',
-  imageSrc: specialistPhoto,
-  name: ['Владыкина', 'Наталья Петровна'],
-  id: `natalia-vladykina-${index}`,
-}));
+const specialists = [
+  {
+    bio: 'Психолог, кандидат психологических наук, когнитивно-поведенческий терапевт, преподаватель. Автор более 50 научных и научно-популярных публикаций.',
+    imageSrc: specialistPhotoVladykina,
+    name: ['Владыкина', 'Наталья Петровна'],
+    id: 'natalia-vladykina',
+  },
+  {
+    bio: 'Социальный психолог, кандидат психологических наук, когнитивно-поведенческий терапевт. Эмоционально-фокусированный парный терапевт. Автор более 80 статей по теме межличностных отношений и благополучия.',
+    imageSrc: specialistPhotoKazantseva,
+    name: ['Казанцева', 'Лариса Валерьевна'],
+    id: 'tatiana-kazantseva',
+  },
+  {
+    bio: 'Кандидат психологических наук, сертифицированный терапевт в области психотравмы, исследователь, преподаватель. Автор более 70 научных публикаций, в том числе про применение ИИ в психологии.',
+    imageSrc: specialistPhotoMararitsa,
+    name: ['Марарица', 'Анна Андреевна'],
+    id: 'larisa-marararitsa',
+  },
+  {
+    bio: 'Магистр психологии, гештальт-терапевт, семейный терапевт, супервизор, исследователь. Автор научных работ по крафтинг-поведению как инструменту поддержки благополучия на рабочем месте.',
+    imageSrc: specialistPhotoYakuhnova,
+    name: ['Якухнова', 'Анастасия Сергеевна'],
+    id: 'anastasia-yakuhnova',
+  },
+];
 
 const teamSizeOptions = [
   { label: 'До 50 человек', value: 'up-to-50' },
@@ -217,7 +240,7 @@ export function App() {
                 title="Первая линия конфиденциальной психологической поддержки на базе ИИ, доступная 24/7."
               />
               <div className="page-button-row">
-                <Button>Обсудить запуск</Button>
+                <Button href="#form">Обсудить запуск</Button>
                 <Button href="#solution" variant="secondary">Что такое Humanteq</Button>
               </div>
             </div>
@@ -318,7 +341,7 @@ export function App() {
             <article className="page-surface page-surface--accent page-solution-card">
               <img alt="" src={solutionComponent} />
               <h3>Специализированный психологический ИИ, а не универсальный чат.</h3>
-              <Button href="#faq-chatgpt" variant="secondary">Чем мы отличаемся от ChatGPT</Button>
+              <Button href="#faq" variant="secondary">Чем мы отличаемся от ChatGPT</Button>
             </article>
           </SideBySide>
         </Container>
@@ -358,7 +381,6 @@ export function App() {
               <div className="page-card-heading">
                 <div className="page-company-asset">
                   <img alt="" src={companyBase} />
-                  <img alt="" src={companyOverlay} />
                 </div>
                 <h3>Компания</h3>
               </div>
@@ -393,7 +415,7 @@ export function App() {
                 description="Не нужно перестраивать HR-процессы или запускать большой IT-проект. Начните с одной группы."
                 title="Быстро запустить, проверить и масштабировать"
               />
-              <Button>Обсудить запуск для команды</Button>
+              <Button href="#form" >Обсудить запуск для команды</Button>
             </div>
             <div className="page-steps">
               {steps.map((step, index) => (
@@ -470,7 +492,7 @@ export function App() {
                 placeholder="Коротко о задаче (не обязательно)."
               />
               <div className="page-form-action">
-                <Button>Обсудить запуск для команды</Button>
+                <Button>Отправить заявку</Button>
                 <p>Отвечаем в течение одного рабочего дня.</p>
               </div>
             </form>

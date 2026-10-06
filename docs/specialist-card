@@ -41,7 +41,7 @@
 `SpecialistCard` использует semantic typography roles:
 
 - name → `semantic/type/heading/tn`;
-- bio → `semantic/type/description/normal`.
+- bio → `semantic/type/body/normal`.
 
 ---
 

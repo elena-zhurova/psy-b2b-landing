@@ -42,7 +42,7 @@
 
 .ds-specialist-card__bio {
   font-family: var(--semantic-type-description-normal-font-family);
-  font-size: var(--semantic-type-description-normal-font-size);
+  font-size: var(--semantic-type-body-normal-font-size);
   font-weight: var(--semantic-type-description-normal-font-weight);
   letter-spacing: var(--semantic-type-description-normal-letter-spacing);
   line-height: var(--semantic-type-description-normal-line-height);

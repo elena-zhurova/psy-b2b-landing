@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--primitives-color-grey-superlight);
   margin: 0;
@@ -274,13 +278,12 @@ textarea {
   flex: 0 0 auto;
   height: 100px;
   object-fit: contain;
-  width: 176px;
+  width: auto;
 }
 
 .page-company-asset {
   display: grid;
   place-items: center;
-  transform: rotate(-90deg);
 }
 
 .page-company-asset img {
